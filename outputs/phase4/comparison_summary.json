@@ -1,0 +1,70 @@
+{
+  "team": "axiom",
+  "phase": 4,
+  "generated_utc": "2026-10-14T10:41:43.736992+00:00",
+  "status": "completed",
+  "comparison_semantics": {
+    "primary": "exact-distribution (ideal circuit statevector) vs sampled-distribution (noisy shots)",
+    "secondary": "sampled (ideal exact distribution, 1024 shots, seed 2026) vs sampled (noisy, 1024 shots, seed 2026)",
+    "note": "TV against an exact distribution carries a positive sampling-noise bias; the equal-shot sampled-vs-sampled value is the fairer measure"
+  },
+  "shots_ideal": 4096,
+  "shots_noisy": 1024,
+  "seed_ideal": 2026,
+  "seed_noisy": 2026,
+  "metrics_ideal_exact": {
+    "expected_penalized_cost": -0.6586221437877599,
+    "feasibility_rate": 1.0000000000000002,
+    "optimal_solution_probability": 0.0021147999198886337,
+    "best_feasible_unpenalized_cost": -1.0663920923466492,
+    "mean_c0_conditioned_on_feasible": -0.6586221437877596,
+    "feasible_normalized_score": 0.47874908888803774,
+    "C_best": -1.0663920923466492,
+    "C_worst": -0.28410099248264825,
+    "feasible_mass": 1.0000000000000544,
+    "total_mass": 1.0000000000000542
+  },
+  "metrics_ideal_sampled": {
+    "expected_penalized_cost": -0.6594245337099686,
+    "feasibility_rate": 1.0,
+    "optimal_solution_probability": 0.00146484375,
+    "best_feasible_unpenalized_cost": -1.0663920923466492,
+    "mean_c0_conditioned_on_feasible": -0.6594245337099686,
+    "feasible_normalized_score": 0.4797747811429393,
+    "C_best": -1.0663920923466492,
+    "C_worst": -0.28410099248264825,
+    "feasible_mass": 4096.0,
+    "total_mass": 4096.0
+  },
+  "metrics_ideal_equal_sampled": {
+    "expected_penalized_cost": -0.6632683580225223,
+    "feasibility_rate": 1.0,
+    "optimal_solution_probability": 0.001953125,
+    "best_feasible_unpenalized_cost": -1.0663920923466492,
+    "mean_c0_conditioned_on_feasible": -0.6632683580225223,
+    "feasible_normalized_score": 0.48468832843143833,
+    "C_best": -1.0663920923466492,
+    "C_worst": -0.28410099248264825,
+    "feasible_mass": 1024.0,
+    "total_mass": 1024.0
+  },
+  "metrics_noisy_sampled": {
+    "expected_penalized_cost": -0.6449906248017913,
+    "feasibility_rate": 0.20703125,
+    "optimal_solution_probability": 0.0,
+    "best_feasible_unpenalized_cost": -1.026445795777763,
+    "mean_c0_conditioned_on_feasible": -0.6481930781669258,
+    "feasible_normalized_score": 0.46541765047253375,
+    "C_best": -1.0663920923466492,
+    "C_worst": -0.28410099248264825,
+    "feasible_mass": 212.0,
+    "total_mass": 1024.0
+  },
+  "total_variation_exact_vs_noisy": 0.8935928974252745,
+  "total_variation_sampled_vs_sampled": 0.9072265625,
+  "feasibility_rate_drop": 0.7929687500000002,
+  "optimal_probability_ideal_exact": 0.0021147999198886337,
+  "optimal_probability_noisy": 0.0,
+  "ideal_is_constrained_by_construction": true,
+  "noisy_is_not": true
+}

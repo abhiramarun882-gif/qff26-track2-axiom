@@ -1,0 +1,1178 @@
+{
+  "team": "axiom",
+  "phase": 2,
+  "study": "depth",
+  "generated_utc": "2026-10-12T16:08:08.083855+00:00",
+  "instance": {
+    "level": "beginner",
+    "n": 6,
+    "K": 3,
+    "q": 0.5,
+    "seed": 2026,
+    "mu": [
+      0.08578696273508724,
+      0.17798263314303092,
+      0.14345368022869703,
+      0.12410010542160961,
+      0.12098346686193025,
+      0.208103649170653
+    ],
+    "Sigma": [
+      [
+        0.01095724279263062,
+        0.0008113994408355516,
+        -0.006412962366628713,
+        -0.005551496567172206,
+        9.926465081548115e-05,
+        -0.004867340574976773
+      ],
+      [
+        0.0008113994408355516,
+        0.008779347881005647,
+        -0.0034189090896832417,
+        -0.005471573109550013,
+        0.0012794280848300325,
+        -0.008112670599749825
+      ],
+      [
+        -0.006412962366628713,
+        -0.0034189090896832417,
+        0.02641096715491648,
+        -0.011062034376030325,
+        -0.012519620011751324,
+        0.010761963700862616
+      ],
+      [
+        -0.005551496567172206,
+        -0.005471573109550013,
+        -0.011062034376030325,
+        0.0761100531149634,
+        0.03863369637203035,
+        -0.00708253977495893
+      ],
+      [
+        9.926465081548115e-05,
+        0.0012794280848300325,
+        -0.012519620011751324,
+        0.03863369637203035,
+        0.06436850118749057,
+        0.007978215833193612
+      ],
+      [
+        -0.004867340574976773,
+        -0.008112670599749825,
+        0.010761963700862616,
+        -0.00708253977495893,
+        0.007978215833193612,
+        0.01939946149643003
+      ]
+    ]
+  },
+  "exact_reference": {
+    "C_best": -0.5030146902647753,
+    "C_worst": -0.22197117201541114,
+    "optimal_asset_indices": [
+      1,
+      2,
+      5
+    ],
+    "optimal_assignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    "feasible_count": 20,
+    "num_optimal_ties": 1,
+    "expected_optimum": -0.5030146902647753,
+    "optimum_match": true
+  },
+  "settings": {
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "lambda": 1.0,
+    "n_starts": 8,
+    "optimizer": "scipy.optimize.minimize:COBYLA",
+    "maxiter": 1500,
+    "rhobeg": 1.0,
+    "initialisation_range": {
+      "gamma": [
+        0.0,
+        6.283185307179586
+      ],
+      "beta": [
+        0.0,
+        3.141592653589793
+      ]
+    },
+    "base_seed": 2026,
+    "shots": 4096,
+    "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement"
+  },
+  "records": [
+    {
+      "p": 1,
+      "lambda": 1.0,
+      "n_qubits": 6,
+      "n_parameters": 2,
+      "optimizer": "scipy.optimize.minimize:COBYLA",
+      "optimizer_options": {
+        "maxiter": 1500,
+        "rhobeg": 1.0
+      },
+      "initialisation_range": {
+        "gamma": [
+          0.0,
+          6.283185307179586
+        ],
+        "beta": [
+          0.0,
+          3.141592653589793
+        ]
+      },
+      "best_energy": 0.010950804578514283,
+      "best_theta": [
+        -0.36037843647167095,
+        1.8219809840857188
+      ],
+      "best_start_index": 6,
+      "best_start_nfev": 52,
+      "starts_summary": {
+        "num_starts": 8,
+        "num_valid_finite": 8,
+        "num_successful": 8,
+        "fraction_successful": 1.0,
+        "energy_mean_successful": 0.6792045478053748,
+        "energy_std_successful": 0.3922641840293123,
+        "best_nfev": 25,
+        "median_nfev": 37.5
+      },
+      "starts": [
+        {
+          "start_index": 0,
+          "x0": [
+            0.5395768949687457,
+            2.133340862493543
+          ],
+          "x_final": [
+            1.5274666397489962,
+            3.1415458735672144
+          ],
+          "energy_final": 1.1200673480728205,
+          "nfev": 28,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.05589540000073612
+        },
+        {
+          "start_index": 1,
+          "x0": [
+            3.9769175925453197,
+            1.9180399182556487
+          ],
+          "x_final": [
+            3.5567771856896155,
+            1.783899555938144
+          ],
+          "energy_final": 0.29291721649718117,
+          "nfev": 60,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.04369030000088969
+        },
+        {
+          "start_index": 2,
+          "x0": [
+            5.775775972355703,
+            0.2572191946124983
+          ],
+          "x_final": [
+            5.79704436529133,
+            0.1771549727254237
+          ],
+          "energy_final": 0.5846798854445989,
+          "nfev": 39,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.02878960000089137
+        },
+        {
+          "start_index": 3,
+          "x0": [
+            5.993805366932873,
+            0.6924597830999384
+          ],
+          "x_final": [
+            5.827202882380927,
+            1.7641256139058246
+          ],
+          "energy_final": 0.47386959594230843,
+          "nfev": 36,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.02592200000071898
+        },
+        {
+          "start_index": 4,
+          "x0": [
+            1.479641846464761,
+            0.5624216526602577
+          ],
+          "x_final": [
+            1.4705327060948232,
+            1.57008019423236
+          ],
+          "energy_final": 1.1200663098430192,
+          "nfev": 25,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.015916700001980644
+        },
+        {
+          "start_index": 5,
+          "x0": [
+            5.982986732587675,
+            1.1492738378624183
+          ],
+          "x_final": [
+            6.754350075058431,
+            1.4114974580158939
+          ],
+          "energy_final": 0.7110178735135164,
+          "nfev": 53,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.03871580000122776
+        },
+        {
+          "start_index": 6,
+          "x0": [
+            0.034013331742444884,
+            0.5179251672498884
+          ],
+          "x_final": [
+            -0.36037843647167095,
+            1.8219809840857188
+          ],
+          "energy_final": 0.010950804578514283,
+          "nfev": 52,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.0383049999945797
+        },
+        {
+          "start_index": 7,
+          "x0": [
+            3.5275840965803202,
+            1.3005450105922645
+          ],
+          "x_final": [
+            4.651475491869728,
+            1.5708037130822254
+          ],
+          "energy_final": 1.1200673485510393,
+          "nfev": 32,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.021332599993911572
+        }
+      ],
+      "total_wall_clock_s": 0.880640700001095,
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 90100,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": 0.0070849771835625255,
+          "feasibility_rate": 0.674560546875,
+          "optimal_solution_probability": 0.035400390625,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3796253998242149,
+          "feasible_normalized_score": 0.5609601985871825,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 2763.0,
+          "total_mass": 4096.0
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": 0.010950804578514644,
+          "feasibility_rate": 0.6682156051128822,
+          "optimal_solution_probability": 0.03232154604322285,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3788714792585035,
+          "feasible_normalized_score": 0.5582776226985529,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 0.6682156051128822,
+          "total_mass": 1.0
+        }
+      }
+    },
+    {
+      "p": 2,
+      "lambda": 1.0,
+      "n_qubits": 6,
+      "n_parameters": 4,
+      "optimizer": "scipy.optimize.minimize:COBYLA",
+      "optimizer_options": {
+        "maxiter": 1500,
+        "rhobeg": 1.0
+      },
+      "initialisation_range": {
+        "gamma": [
+          0.0,
+          6.283185307179586
+        ],
+        "beta": [
+          0.0,
+          3.141592653589793
+        ]
+      },
+      "best_energy": -0.26245168832408095,
+      "best_theta": [
+        1.075343418647831,
+        1.673404083246583,
+        1.6491250684911798,
+        1.2995527537811227
+      ],
+      "best_start_index": 7,
+      "best_start_nfev": 202,
+      "starts_summary": {
+        "num_starts": 8,
+        "num_valid_finite": 8,
+        "num_successful": 5,
+        "fraction_successful": 0.625,
+        "energy_mean_successful": 0.18982728546597347,
+        "energy_std_successful": 0.4950508324489764,
+        "best_nfev": 117,
+        "median_nfev": 872.0
+      },
+      "starts": [
+        {
+          "start_index": 0,
+          "x0": [
+            4.322717538761362,
+            4.176191172862424,
+            0.13903175071911444,
+            0.7260016311305725
+          ],
+          "x_final": [
+            3.593239774425166,
+            5.256881445813395,
+            0.20375812602056279,
+            1.5000366070610622
+          ],
+          "energy_final": 0.20901022100727668,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 1.4651384000026155
+        },
+        {
+          "start_index": 1,
+          "x0": [
+            6.1896849184878375,
+            3.576464263345547,
+            2.046360704737099,
+            2.8798794472567057
+          ],
+          "x_final": [
+            6.640589364652103,
+            3.138214784876941,
+            2.3949155287315214,
+            2.552258415675822
+          ],
+          "energy_final": -0.0013272342647978642,
+          "nfev": 610,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.5855288000020664
+        },
+        {
+          "start_index": 2,
+          "x0": [
+            3.1282216974682906,
+            6.0370926263714875,
+            1.5364062194937471,
+            1.5941677047740601
+          ],
+          "x_final": [
+            4.637303229485413,
+            5.159616863051228,
+            1.5642999484534792,
+            1.8213314549267063
+          ],
+          "energy_final": 0.015525332625961737,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 1.4617553999996744
+        },
+        {
+          "start_index": 3,
+          "x0": [
+            2.1961400375012317,
+            3.0332799843541713,
+            1.6588795226474096,
+            1.7214003844709005
+          ],
+          "x_final": [
+            2.831665120149345,
+            3.090016771457802,
+            1.5628496183117637,
+            1.8167198635301445
+          ],
+          "energy_final": -6.274990031096724e-05,
+          "nfev": 1134,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 1.0970721000048798
+        },
+        {
+          "start_index": 4,
+          "x0": [
+            0.6438584192123282,
+            1.461750250837951,
+            1.3228030546445277,
+            1.8096430097717795
+          ],
+          "x_final": [
+            1.5159609324090375,
+            1.2004295851380709,
+            1.2945915719192047,
+            1.8136259779970298
+          ],
+          "energy_final": 0.058306582310374964,
+          "nfev": 117,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.10589140000229236
+        },
+        {
+          "start_index": 5,
+          "x0": [
+            4.0573646062082345,
+            3.4073683997614332,
+            0.6931740027005964,
+            0.7719900423076408
+          ],
+          "x_final": [
+            5.189164385066628,
+            3.3817182476221133,
+            0.577978975976441,
+            0.7215707388940242
+          ],
+          "energy_final": 1.1546715175086821,
+          "nfev": 142,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.13337889999820618
+        },
+        {
+          "start_index": 6,
+          "x0": [
+            2.0959826854583423,
+            3.092599858994896,
+            1.5958802353315549,
+            0.5207241428557454
+          ],
+          "x_final": [
+            2.774371283853241,
+            2.2702094523246004,
+            1.3189547673228417,
+            0.09465081316447237
+          ],
+          "energy_final": -0.053384761653568376,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 1.4548145000007935
+        },
+        {
+          "start_index": 7,
+          "x0": [
+            1.3622647964644252,
+            0.5555583717077212,
+            0.3770314839122624,
+            1.1159018336181432
+          ],
+          "x_final": [
+            1.075343418647831,
+            1.673404083246583,
+            1.6491250684911798,
+            1.2995527537811227
+          ],
+          "energy_final": -0.26245168832408095,
+          "nfev": 202,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.1978945000009844
+        }
+      ],
+      "total_wall_clock_s": 6.501841799996328,
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 90200,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": -0.2837997043747038,
+          "feasibility_rate": 0.929443359375,
+          "optimal_solution_probability": 0.048583984375,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3793452775957297,
+          "feasible_normalized_score": 0.5599634766907656,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 3807.0,
+          "total_mass": 4096.0
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": -0.2624516883240806,
+          "feasibility_rate": 0.929115311199476,
+          "optimal_solution_probability": 0.04792901787828492,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.37972017826176874,
+          "feasible_normalized_score": 0.5612974361728212,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 0.9291153111994758,
+          "total_mass": 0.9999999999999998
+        }
+      }
+    },
+    {
+      "p": 3,
+      "lambda": 1.0,
+      "n_qubits": 6,
+      "n_parameters": 6,
+      "optimizer": "scipy.optimize.minimize:COBYLA",
+      "optimizer_options": {
+        "maxiter": 1500,
+        "rhobeg": 1.0
+      },
+      "initialisation_range": {
+        "gamma": [
+          0.0,
+          6.283185307179586
+        ],
+        "beta": [
+          0.0,
+          3.141592653589793
+        ]
+      },
+      "best_energy": -0.25175634663480706,
+      "best_theta": [
+        2.720589321233422,
+        3.1752902493041724,
+        4.929613827538657,
+        1.5246702956850424,
+        1.7791673496799922,
+        1.6793907449314105
+      ],
+      "best_start_index": 6,
+      "best_start_nfev": 1500,
+      "starts_summary": {
+        "num_starts": 8,
+        "num_valid_finite": 8,
+        "num_successful": 3,
+        "fraction_successful": 0.375,
+        "energy_mean_successful": 0.06536789231119487,
+        "energy_std_successful": 0.18725969801083533,
+        "best_nfev": 567,
+        "median_nfev": 1500.0
+      },
+      "starts": [
+        {
+          "start_index": 0,
+          "x0": [
+            3.0589826941769713,
+            3.3496168413579257,
+            5.413446750408144,
+            0.8828682627106049,
+            1.5417737855032672,
+            1.9969982007695481
+          ],
+          "x_final": [
+            2.816489183300238,
+            3.444524723460622,
+            5.499097498334465,
+            1.0085713612679679,
+            1.6492450995955295,
+            1.96047214054215
+          ],
+          "energy_final": 0.0023795575038985453,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 1.7940152999944985
+        },
+        {
+          "start_index": 1,
+          "x0": [
+            5.8670651279380435,
+            3.5892420779088337,
+            3.3891976333603933,
+            1.103593564434023,
+            0.9999314072809883,
+            1.6900737305566365
+          ],
+          "x_final": [
+            5.867651616801059,
+            4.749784959870254,
+            3.0457410310012936,
+            0.9737749033959096,
+            1.03523526462658,
+            1.9340955452724724
+          ],
+          "energy_final": -0.1475010679756794,
+          "nfev": 863,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 1.0008384000029764
+        },
+        {
+          "start_index": 2,
+          "x0": [
+            0.4775257009552899,
+            0.5564671742512888,
+            4.530155831755384,
+            2.111450947321379,
+            0.3071573904115761,
+            0.3189175336737125
+          ],
+          "x_final": [
+            1.5124815007677899,
+            1.1276702043038835,
+            4.780267284475661,
+            2.0903858534904205,
+            1.3412103828317548,
+            -0.11853577070297867
+          ],
+          "energy_final": 0.035367787182228605,
+          "nfev": 646,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.743591500002367
+        },
+        {
+          "start_index": 3,
+          "x0": [
+            1.402489786909554,
+            2.2719394464825764,
+            2.708880652185591,
+            1.4409236049795677,
+            2.997634690700524,
+            2.1394647056077427
+          ],
+          "x_final": [
+            1.6156370630114147,
+            2.126917955842041,
+            2.506855772034016,
+            1.4993202873315086,
+            4.4703587616344675,
+            2.001632660867532
+          ],
+          "energy_final": -0.039840257997933906,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 1.784493699997256
+        },
+        {
+          "start_index": 4,
+          "x0": [
+            5.8418927443986695,
+            0.30161233659235387,
+            2.947271709460736,
+            1.5723237671404369,
+            2.111402707842809,
+            0.6327222676842017
+          ],
+          "x_final": [
+            5.721907346142109,
+            0.1534242212801417,
+            3.1208943772743427,
+            1.4903139941962757,
+            2.3812990725201284,
+            0.5686077624721637
+          ],
+          "energy_final": -0.008502686007511404,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 1.8687101999967126
+        },
+        {
+          "start_index": 5,
+          "x0": [
+            2.687969429757676,
+            1.4249629470293794,
+            5.577224619928222,
+            0.4861567435129278,
+            0.7844262595758027,
+            1.7202487427607875
+          ],
+          "x_final": [
+            3.2605409138934243,
+            1.6382544140753934,
+            7.005396181055482,
+            -0.3025786513787018,
+            0.1560421480773135,
+            0.570218138993308
+          ],
+          "energy_final": 0.3082369577270354,
+          "nfev": 567,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.6656121999985771
+        },
+        {
+          "start_index": 6,
+          "x0": [
+            2.9762778359071813,
+            2.157467216989314,
+            3.6420133033466837,
+            1.763100630134235,
+            0.997423472538054,
+            1.4406475296989865
+          ],
+          "x_final": [
+            2.720589321233422,
+            3.1752902493041724,
+            4.929613827538657,
+            1.5246702956850424,
+            1.7791673496799922,
+            1.6793907449314105
+          ],
+          "energy_final": -0.25175634663480706,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 1.7567954000041937
+        },
+        {
+          "start_index": 7,
+          "x0": [
+            1.952263387737466,
+            3.440055875367032,
+            2.659580008616584,
+            0.12681792151635188,
+            0.08930898966879601,
+            1.6802212779461574
+          ],
+          "x_final": [
+            2.8154450171555516,
+            3.2548665831274666,
+            3.5155305496965052,
+            -0.44836017791828664,
+            -0.2230874113244626,
+            1.538631909816517
+          ],
+          "energy_final": -0.03304613677162106,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 2.023528099998657
+        }
+      ],
+      "total_wall_clock_s": 11.637960400003067,
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 90300,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": -0.2509813035989839,
+          "feasibility_rate": 0.895263671875,
+          "optimal_solution_probability": 0.0498046875,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.37780930592100115,
+          "feasible_normalized_score": 0.5544982317198223,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 3667.0,
+          "total_mass": 4096.0
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": -0.25175634663480684,
+          "feasibility_rate": 0.8946579778764923,
+          "optimal_solution_probability": 0.05070598009026509,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3798275471581524,
+          "feasible_normalized_score": 0.5616794727237885,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 0.8946579778764923,
+          "total_mass": 1.0
+        }
+      }
+    },
+    {
+      "p": 4,
+      "lambda": 1.0,
+      "n_qubits": 6,
+      "n_parameters": 8,
+      "optimizer": "scipy.optimize.minimize:COBYLA",
+      "optimizer_options": {
+        "maxiter": 1500,
+        "rhobeg": 1.0
+      },
+      "initialisation_range": {
+        "gamma": [
+          0.0,
+          6.283185307179586
+        ],
+        "beta": [
+          0.0,
+          3.141592653589793
+        ]
+      },
+      "best_energy": -0.3529061494989435,
+      "best_theta": [
+        0.2969469445570995,
+        0.08225065814516717,
+        3.7145172899867562,
+        4.098268455962635,
+        1.6334529508838413,
+        2.016649515814908,
+        1.564536348994044,
+        0.9005336435340933
+      ],
+      "best_start_index": 4,
+      "best_start_nfev": 1500,
+      "starts_summary": {
+        "num_starts": 8,
+        "num_valid_finite": 8,
+        "num_successful": 3,
+        "fraction_successful": 0.375,
+        "energy_mean_successful": -0.1426981200879164,
+        "energy_std_successful": 0.24327311476576516,
+        "best_nfev": 646,
+        "median_nfev": 1500.0
+      },
+      "starts": [
+        {
+          "start_index": 0,
+          "x0": [
+            3.162713414399843,
+            3.022290625665759,
+            1.8358200417492918,
+            5.165055645514279,
+            1.4359263323467224,
+            3.015990928912944,
+            1.2207613500697743,
+            0.05683736549546078
+          ],
+          "x_final": [
+            4.22376682068658,
+            3.140905074395631,
+            1.667094435449879,
+            6.2462875865778855,
+            1.6001390462892073,
+            3.249904289827332,
+            1.310149744757644,
+            -0.019249989223468822
+          ],
+          "energy_final": -0.27463201147482297,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 2.251059800000803
+        },
+        {
+          "start_index": 1,
+          "x0": [
+            1.595361761796185,
+            2.7216826299033228,
+            5.830556033292886,
+            4.6023632679020885,
+            2.698484987587541,
+            2.00594220116512,
+            1.968041634605068,
+            0.8469595379342235
+          ],
+          "x_final": [
+            1.891764861552283,
+            2.615855090705433,
+            6.1898504911401195,
+            4.373899795134712,
+            3.5383339874622313,
+            1.8671668802185113,
+            1.7375525902277245,
+            0.7211893783071622
+          ],
+          "energy_final": -0.14390329179654507,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 2.9097292000005837
+        },
+        {
+          "start_index": 2,
+          "x0": [
+            2.318347466441864,
+            5.230627015794562,
+            4.197880890114195,
+            5.3601164679288855,
+            2.001504887172728,
+            2.562000183038774,
+            3.038784507444855,
+            0.4719260363049922
+          ],
+          "x_final": [
+            2.354111168719933,
+            4.901428079284073,
+            4.4276404422278075,
+            6.287149025673713,
+            2.0973910341268267,
+            2.405631205497711,
+            3.073984498610063,
+            0.35343807032974167
+          ],
+          "energy_final": 0.05892300662510813,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 2.3328360000014072
+        },
+        {
+          "start_index": 3,
+          "x0": [
+            0.0038631715346274698,
+            5.3772869956324465,
+            5.70589917860544,
+            6.10811242000619,
+            2.7571724974040737,
+            1.8395192007478747,
+            3.0654333130108786,
+            1.971165340949915
+          ],
+          "x_final": [
+            0.3845684935532823,
+            5.223162806132508,
+            5.5704825110862135,
+            6.072233815919733,
+            2.891767801951647,
+            1.5674386936895253,
+            3.2663328263236906,
+            1.5665117881386668
+          ],
+          "energy_final": -0.34206468227453934,
+          "nfev": 709,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 1.1028389999992214
+        },
+        {
+          "start_index": 4,
+          "x0": [
+            1.1786292639077494,
+            1.8660519954007584,
+            4.231533445245846,
+            4.074062364286728,
+            1.2926882794376895,
+            1.4656211369466359,
+            1.236510284845757,
+            1.2432130287558059
+          ],
+          "x_final": [
+            0.2969469445570995,
+            0.08225065814516717,
+            3.7145172899867562,
+            4.098268455962635,
+            1.6334529508838413,
+            2.016649515814908,
+            1.564536348994044,
+            0.9005336435340933
+          ],
+          "energy_final": -0.3529061494989435,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 2.561542000003101
+        },
+        {
+          "start_index": 5,
+          "x0": [
+            4.133723812045506,
+            0.3954060488511848,
+            1.3553422716961099,
+            0.2564156659277961,
+            1.3955802879955348,
+            1.6461299061122856,
+            2.3348946920631652,
+            1.7313279009461402
+          ],
+          "x_final": [
+            4.925765155561229,
+            0.9251300249054879,
+            2.6203636254478337,
+            1.48847873565622,
+            1.536718998151029,
+            1.8249464942428109,
+            2.4171351309151143,
+            2.2871061611699655
+          ],
+          "energy_final": -0.2858366727805545,
+          "nfev": 1000,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 1.6295641000033356
+        },
+        {
+          "start_index": 6,
+          "x0": [
+            3.819527228055974,
+            0.9857021507294402,
+            1.0144414144461136,
+            5.989227791475332,
+            2.407545274295427,
+            1.9040684430166603,
+            2.9424356047959543,
+            1.4015715779844602
+          ],
+          "x_final": [
+            4.601426063905342,
+            0.6818287154024315,
+            1.0242527032860405,
+            7.057611466765469,
+            2.307242688555916,
+            2.9074908172871483,
+            3.9039083241142967,
+            1.2623980662022112
+          ],
+          "energy_final": 0.19980699479134456,
+          "nfev": 646,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 0.9926865000015823
+        },
+        {
+          "start_index": 7,
+          "x0": [
+            5.318768307493557,
+            0.23403533766207157,
+            6.085998758613515,
+            3.836615575222557,
+            0.7595013121667892,
+            0.1430042406471746,
+            1.2818568248994011,
+            3.1173281163563695
+          ],
+          "x_final": [
+            6.768763696311464,
+            -0.008340628361888062,
+            6.2009287628018805,
+            4.396823226000972,
+            1.827538225763728,
+            -0.22786644865456668,
+            2.8651838881361424,
+            3.2505714264037873
+          ],
+          "energy_final": -0.27032423878939726,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 2.305199000002176
+        }
+      ],
+      "total_wall_clock_s": 16.085983600001782,
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 90400,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": -0.3517932943497584,
+          "feasibility_rate": 0.984130859375,
+          "optimal_solution_probability": 0.048828125,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3793440126686572,
+          "feasible_normalized_score": 0.5599589758679735,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 4031.0,
+          "total_mass": 4096.0
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": -0.3529061494989432,
+          "feasibility_rate": 0.9851801369252918,
+          "optimal_solution_probability": 0.047673102631526736,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3790063649732908,
+          "feasible_normalized_score": 0.5587575687070128,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 0.9851801369252918,
+          "total_mass": 1.0
+        }
+      }
+    }
+  ],
+  "package_versions": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "0.4.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "rustworkx": "0.18.1"
+  },
+  "package_versions_as_recorded_originally": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "unavailable (No module named 'qiskit_aer')",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "unavailable (No module named 'qiskit_algorithms')",
+    "numpy": "2.3.3",
+    "scipy": "1.16.2",
+    "matplotlib": "3.10.7",
+    "rustworkx": "0.18.1"
+  },
+  "metadata_correction": {
+    "corrected_utc": "2026-10-14T11:04:56+00:00",
+    "scope": "environment metadata only (package_versions); all measured results are unchanged and Phase 2 was NOT rerun",
+    "reason": "the originally recorded versions conflicted with the pinned project environment (.venv, Python 3.13.14); corrected from a fresh probe of the actual project interpreter",
+    "original_values_preserved_under": "package_versions_as_recorded_originally"
+  }
+}

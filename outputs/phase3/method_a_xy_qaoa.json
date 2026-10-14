@@ -1,0 +1,862 @@
+{
+  "method": "A_xy_qaoa",
+  "depths": [
+    1,
+    2,
+    3
+  ],
+  "n_starts": 5,
+  "records": [
+    {
+      "method": "A_xy_qaoa",
+      "p": 1,
+      "n_qubits": 12,
+      "n_parameters": 2,
+      "lambda": null,
+      "optimizer": "scipy.optimize.minimize:COBYLA",
+      "optimizer_options": {
+        "maxiter": 1500,
+        "rhobeg": 1.0
+      },
+      "initialisation": "random gammas U[0,2pi), betas U[0,pi); warm-started starts flagged separately",
+      "best_energy_C0_exact": -0.6906255050630834,
+      "best_theta": [
+        9.898341703837358,
+        1.5090266251537918
+      ],
+      "best_start_index": 1,
+      "best_is_warmstart": false,
+      "starts": [
+        {
+          "start_index": 0,
+          "x0": [
+            5.650594874907578,
+            0.9774177905886295
+          ],
+          "x_final": [
+            10.810373324940457,
+            3.2205956228489843
+          ],
+          "energy_final": -0.656247579627731,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 16.196616099987295
+        },
+        {
+          "start_index": 1,
+          "x0": [
+            5.764224747704741,
+            0.4286066657883161
+          ],
+          "x_final": [
+            9.898341703837358,
+            1.5090266251537918
+          ],
+          "energy_final": -0.6906255050630834,
+          "nfev": 851,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 9.238526000001002
+        },
+        {
+          "start_index": 2,
+          "x0": [
+            4.388087604384928,
+            0.16804591662471854
+          ],
+          "x_final": [
+            9.892122302312991,
+            1.5089583862219889
+          ],
+          "energy_final": -0.6906253290124333,
+          "nfev": 837,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 9.056382200011285
+        },
+        {
+          "start_index": 3,
+          "x0": [
+            3.60709001396344,
+            2.3001257470338654
+          ],
+          "x_final": [
+            10.731750434862851,
+            3.220535266908484
+          ],
+          "energy_final": -0.6562426542862514,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 16.194742399995448
+        },
+        {
+          "start_index": 4,
+          "x0": [
+            3.54474544234151,
+            0.7514484464041563
+          ],
+          "x_final": [
+            9.888655972002576,
+            1.5089176950262035
+          ],
+          "energy_final": -0.6906252040827714,
+          "nfev": 1062,
+          "success": true,
+          "status": 0,
+          "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+          "elapsed_s": 11.446543099998962
+        }
+      ],
+      "starts_summary": {
+        "num_starts": 5,
+        "num_valid_finite": 5,
+        "num_successful": 3,
+        "fraction_successful": 0.6,
+        "energy_mean_successful": -0.6906253460527627,
+        "energy_std_successful": 1.2346407486312562e-07,
+        "energy_min": -0.6906255050630834,
+        "energy_max": -0.6562426542862514,
+        "best_nfev": 837,
+        "median_nfev": 1062.0
+      },
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 3027,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": -0.6943550367745515,
+          "feasibility_rate": 1.0,
+          "optimal_solution_probability": 0.0009765625,
+          "best_feasible_unpenalized_cost": -1.0663920923466492,
+          "mean_c0_conditioned_on_feasible": -0.6943550367745515,
+          "feasible_normalized_score": 0.5244263220727229,
+          "C_best": -1.0663920923466492,
+          "C_worst": -0.28410099248264825,
+          "feasible_mass": 4096.0,
+          "total_mass": 4096.0,
+          "expected_unpenalized_cost": -0.6943550367745515
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": -0.6906255050630834,
+          "feasibility_rate": 1.0000000000000007,
+          "optimal_solution_probability": 0.0004728066162606709,
+          "best_feasible_unpenalized_cost": -1.0663920923466492,
+          "mean_c0_conditioned_on_feasible": -0.690625505063083,
+          "feasible_normalized_score": 0.5196588746198286,
+          "C_best": -1.0663920923466492,
+          "C_worst": -0.28410099248264825,
+          "feasible_mass": 1.0000000000000007,
+          "total_mass": 1.0,
+          "expected_unpenalized_cost": -0.6906255050630834
+        }
+      },
+      "circuit_resources": {
+        "num_qubits": 12,
+        "reps": 1,
+        "num_trainable_parameters": 2,
+        "logical_depth_opaque": 3,
+        "logical_size_opaque": 3,
+        "state_preparation_included": true,
+        "state_preparation_is_opaque": true,
+        "two_qubit_gate_count": null,
+        "two_qubit_gate_count_note": "Not reliably available at the logical level because StatePreparation and PauliEvolutionGate are opaque. A standard decomposition of the XY ring mixer contributes 2*n two-qubit gates per layer (n XX + n YY); the ZZ cost layer and the state preparation add further, unspecified cost.",
+        "depth_is_logical_not_transpiled": true
+      },
+      "optimization_wall_clock_s": 62.13345799999661
+    },
+    {
+      "method": "A_xy_qaoa",
+      "p": 2,
+      "n_qubits": 12,
+      "n_parameters": 4,
+      "lambda": null,
+      "optimizer": "scipy.optimize.minimize:COBYLA",
+      "optimizer_options": {
+        "maxiter": 1500,
+        "rhobeg": 1.0
+      },
+      "initialisation": "random gammas U[0,2pi), betas U[0,pi); warm-started starts flagged separately",
+      "best_energy_C0_exact": -0.7009729837327393,
+      "best_theta": [
+        3.3186100716793407,
+        8.319834823092027,
+        3.5804349712153436,
+        1.4684801732901147
+      ],
+      "best_start_index": 3,
+      "best_is_warmstart": false,
+      "starts": [
+        {
+          "start_index": 0,
+          "x0": [
+            4.8910585299920655,
+            5.552992401638958,
+            2.3948682782770305,
+            3.0298988382004404
+          ],
+          "x_final": [
+            7.653606449750008,
+            4.841598732393987,
+            0.7629440018157341,
+            4.112047059248
+          ],
+          "energy_final": -0.6822698687388972,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 31.3881137999997
+        },
+        {
+          "start_index": 1,
+          "x0": [
+            6.098534506720327,
+            0.513902558943544,
+            0.3820095027721093,
+            3.0562274320443596
+          ],
+          "x_final": [
+            6.558570356212537,
+            7.473755758922748,
+            0.6736173928054285,
+            4.2607766823815405
+          ],
+          "energy_final": -0.6843677386170433,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 32.97379899999942
+        },
+        {
+          "start_index": 2,
+          "x0": [
+            4.085606812592277,
+            1.4454985490606755,
+            0.1203065605161154,
+            1.8080622716336308
+          ],
+          "x_final": [
+            7.3546440837006175,
+            5.099228935236276,
+            -0.39055745799495967,
+            1.8795993079529862
+          ],
+          "energy_final": -0.6979478075126646,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 32.748473500003456
+        },
+        {
+          "start_index": 3,
+          "x0": [
+            3.3290297376544413,
+            5.872502176068613,
+            3.0640080666874034,
+            1.3930690131419934
+          ],
+          "x_final": [
+            3.3186100716793407,
+            8.319834823092027,
+            3.5804349712153436,
+            1.4684801732901147
+          ],
+          "energy_final": -0.7009729837327393,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 31.49289240001235
+        },
+        {
+          "start_index": 4,
+          "x0": [
+            4.765662448662993,
+            2.8042689714863105,
+            1.7601054067397723,
+            1.3850199723736778
+          ],
+          "x_final": [
+            3.5525007136439903,
+            8.142462668941564,
+            3.55534744500412,
+            1.4718654074694335
+          ],
+          "energy_final": -0.7009022659733408,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 31.778063699995982
+        },
+        {
+          "start_index": 5,
+          "x0": [
+            9.898341703837358,
+            9.898341703837358,
+            1.5090266251537918,
+            1.5090266251537918
+          ],
+          "x_final": [
+            4.032872823621922,
+            9.136835457007724,
+            1.4331306021476038,
+            1.6218437165978374
+          ],
+          "energy_final": -0.6890933104371202,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 32.727289299989934
+        }
+      ],
+      "starts_summary": {
+        "num_starts": 6,
+        "num_valid_finite": 6,
+        "num_successful": 0,
+        "fraction_successful": 0.0,
+        "energy_mean_successful": null,
+        "energy_std_successful": null,
+        "energy_min": -0.7009729837327393,
+        "energy_max": -0.6822698687388972,
+        "best_nfev": 1500,
+        "median_nfev": 1500.0
+      },
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 3028,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": -0.7025680201162386,
+          "feasibility_rate": 1.0,
+          "optimal_solution_probability": 0.000244140625,
+          "best_feasible_unpenalized_cost": -1.0663920923466492,
+          "mean_c0_conditioned_on_feasible": -0.7025680201162386,
+          "feasible_normalized_score": 0.5349249501960839,
+          "C_best": -1.0663920923466492,
+          "C_worst": -0.28410099248264825,
+          "feasible_mass": 4096.0,
+          "total_mass": 4096.0,
+          "expected_unpenalized_cost": -0.7025680201162386
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": -0.7009729837327395,
+          "feasibility_rate": 1.0000000000000002,
+          "optimal_solution_probability": 0.000591254107165727,
+          "best_feasible_unpenalized_cost": -1.0663920923466492,
+          "mean_c0_conditioned_on_feasible": -0.7009729837327394,
+          "feasible_normalized_score": 0.5328860207185832,
+          "C_best": -1.0663920923466492,
+          "C_worst": -0.28410099248264825,
+          "feasible_mass": 1.0,
+          "total_mass": 0.9999999999999999,
+          "expected_unpenalized_cost": -0.7009729837327395
+        }
+      },
+      "circuit_resources": {
+        "num_qubits": 12,
+        "reps": 2,
+        "num_trainable_parameters": 4,
+        "logical_depth_opaque": 5,
+        "logical_size_opaque": 5,
+        "state_preparation_included": true,
+        "state_preparation_is_opaque": true,
+        "two_qubit_gate_count": null,
+        "two_qubit_gate_count_note": "Not reliably available at the logical level because StatePreparation and PauliEvolutionGate are opaque. A standard decomposition of the XY ring mixer contributes 2*n two-qubit gates per layer (n XX + n YY); the ZZ cost layer and the state preparation add further, unspecified cost.",
+        "depth_is_logical_not_transpiled": true
+      },
+      "optimization_wall_clock_s": 193.10920500000066
+    },
+    {
+      "method": "A_xy_qaoa",
+      "p": 3,
+      "n_qubits": 12,
+      "n_parameters": 6,
+      "lambda": null,
+      "optimizer": "scipy.optimize.minimize:COBYLA",
+      "optimizer_options": {
+        "maxiter": 1500,
+        "rhobeg": 1.0
+      },
+      "initialisation": "random gammas U[0,2pi), betas U[0,pi); warm-started starts flagged separately",
+      "best_energy_C0_exact": -0.7273387651963767,
+      "best_theta": [
+        5.648123324862116,
+        6.380744003703966,
+        -2.6246723989885155,
+        4.277142937100028,
+        2.4804785688025617,
+        2.379861294788971
+      ],
+      "best_start_index": 0,
+      "best_is_warmstart": false,
+      "starts": [
+        {
+          "start_index": 0,
+          "x0": [
+            1.7557052110259088,
+            5.557813139201475,
+            0.04951717768282803,
+            2.825051651109594,
+            2.45726710089229,
+            2.5689549304151083
+          ],
+          "x_final": [
+            5.648123324862116,
+            6.380744003703966,
+            -2.6246723989885155,
+            4.277142937100028,
+            2.4804785688025617,
+            2.379861294788971
+          ],
+          "energy_final": -0.7273387651963767,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 47.020023899996886
+        },
+        {
+          "start_index": 1,
+          "x0": [
+            1.1652753998131145,
+            3.149691311659863,
+            3.950562293006858,
+            0.36635983339213285,
+            0.8492961298565828,
+            1.0880740449398785
+          ],
+          "x_final": [
+            0.9537816265430045,
+            5.397587585086877,
+            6.224538534476393,
+            0.610756218770252,
+            0.2948711995360288,
+            1.2628559473242826
+          ],
+          "energy_final": -0.7009409168466709,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 96.97687700000824
+        },
+        {
+          "start_index": 2,
+          "x0": [
+            1.3144854634095064,
+            4.874476340508755,
+            0.4007505558587717,
+            1.105221897791947,
+            0.5465891217485364,
+            3.0594885399953404
+          ],
+          "x_final": [
+            3.893865750809582,
+            5.624744209665539,
+            -7.413143025579921,
+            0.4371167819633978,
+            1.9422138802716444,
+            2.4188135580516845
+          ],
+          "energy_final": -0.7063292183886327,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 105.09392210000078
+        },
+        {
+          "start_index": 3,
+          "x0": [
+            1.0260042755285819,
+            2.2303514776319933,
+            4.303498582857838,
+            2.9457287859808843,
+            2.854181648623994,
+            1.4178988448231156
+          ],
+          "x_final": [
+            5.491013637323046,
+            5.999850506325037,
+            7.305378429136685,
+            1.5557741263332574,
+            3.596693922153472,
+            1.639264515557269
+          ],
+          "energy_final": -0.7195200178479793,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 76.2260510000051
+        },
+        {
+          "start_index": 4,
+          "x0": [
+            3.3093195010410885,
+            0.15828868624974016,
+            5.4328970353693835,
+            1.4587341650284675,
+            2.6062797355950402,
+            1.7345651152696806
+          ],
+          "x_final": [
+            0.9500687741732012,
+            2.5234669078082157,
+            9.427291342864729,
+            2.3052891825362702,
+            3.413641760579817,
+            1.513470600137959
+          ],
+          "energy_final": -0.7090898040992899,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 48.46111669999664
+        },
+        {
+          "start_index": 5,
+          "x0": [
+            3.3186100716793407,
+            8.319834823092027,
+            8.319834823092027,
+            3.5804349712153436,
+            1.4684801732901147,
+            1.4684801732901147
+          ],
+          "x_final": [
+            3.6045014407643485,
+            4.66337293135101,
+            7.369772274733688,
+            3.699008145300288,
+            1.4874935756964898,
+            1.6639752066196452
+          ],
+          "energy_final": -0.7022033239712409,
+          "nfev": 1500,
+          "success": false,
+          "status": 3,
+          "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+          "elapsed_s": 91.7642923000094
+        }
+      ],
+      "starts_summary": {
+        "num_starts": 6,
+        "num_valid_finite": 6,
+        "num_successful": 0,
+        "fraction_successful": 0.0,
+        "energy_mean_successful": null,
+        "energy_std_successful": null,
+        "energy_min": -0.7273387651963767,
+        "energy_max": -0.7009409168466709,
+        "best_nfev": 1500,
+        "median_nfev": 1500.0
+      },
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 3029,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": -0.7334902423818602,
+          "feasibility_rate": 1.0,
+          "optimal_solution_probability": 0.0078125,
+          "best_feasible_unpenalized_cost": -1.0663920923466492,
+          "mean_c0_conditioned_on_feasible": -0.7334902423818602,
+          "feasible_normalized_score": 0.5744527196811225,
+          "C_best": -1.0663920923466492,
+          "C_worst": -0.28410099248264825,
+          "feasible_mass": 4096.0,
+          "total_mass": 4096.0,
+          "expected_unpenalized_cost": -0.7334902423818602
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": -0.7273387651963763,
+          "feasibility_rate": 0.9999999999999996,
+          "optimal_solution_probability": 0.0066356692528994855,
+          "best_feasible_unpenalized_cost": -1.0663920923466492,
+          "mean_c0_conditioned_on_feasible": -0.7273387651963766,
+          "feasible_normalized_score": 0.5665893077280107,
+          "C_best": -1.0663920923466492,
+          "C_worst": -0.28410099248264825,
+          "feasible_mass": 0.9999999999999996,
+          "total_mass": 1.0,
+          "expected_unpenalized_cost": -0.7273387651963763
+        }
+      },
+      "circuit_resources": {
+        "num_qubits": 12,
+        "reps": 3,
+        "num_trainable_parameters": 6,
+        "logical_depth_opaque": 7,
+        "logical_size_opaque": 7,
+        "state_preparation_included": true,
+        "state_preparation_is_opaque": true,
+        "two_qubit_gate_count": null,
+        "two_qubit_gate_count_note": "Not reliably available at the logical level because StatePreparation and PauliEvolutionGate are opaque. A standard decomposition of the XY ring mixer contributes 2*n two-qubit gates per layer (n XX + n YY); the ZZ cost layer and the state preparation add further, unspecified cost.",
+        "depth_is_logical_not_transpiled": true
+      },
+      "optimization_wall_clock_s": 465.5431404999981
+    }
+  ],
+  "team": "axiom",
+  "phase": 3,
+  "generated_utc": "2026-10-13T01:03:44.417817+00:00",
+  "instance": {
+    "level": "intermediate",
+    "n": 12,
+    "K": 6,
+    "q": 0.5,
+    "seed": 2026,
+    "mu": [
+      0.08578696273508724,
+      0.17798263314303092,
+      0.14345368022869703,
+      0.12410010542160961,
+      0.12098346686193025,
+      0.208103649170653,
+      0.23102876733543481,
+      0.08547063836460973,
+      0.1805569605370264,
+      0.10966055347111386,
+      0.24339244003247812,
+      0.23397003210745565
+    ],
+    "Sigma": [
+      [
+        0.035190315035922126,
+        -0.017991193121301336,
+        -0.028853492602640092,
+        0.0032830697251358784,
+        0.028739933434941963,
+        -0.016975369004657254,
+        0.031146518521673904,
+        0.010111166936326499,
+        -0.0077879576987992605,
+        -0.024924780049251322,
+        0.011493809704624597,
+        -0.0006731500208013454
+      ],
+      [
+        -0.017991193121301336,
+        0.14047855430245396,
+        0.010315943698111976,
+        0.07391569404813764,
+        -0.010693510024064346,
+        -0.00749098432230651,
+        -0.05641882390253825,
+        0.02147320301156988,
+        0.013553842629172386,
+        0.026799339697742258,
+        -0.021573641304556808,
+        0.0010516907278146862
+      ],
+      [
+        -0.028853492602640092,
+        0.010315943698111976,
+        0.11012003614546305,
+        0.01647004500123188,
+        -0.047439850931371395,
+        -0.00742856134657842,
+        -0.07447010915883646,
+        -0.025819097345056823,
+        0.012284723898422405,
+        -0.02841511880271512,
+        -0.019205372117610885,
+        0.03826446608757003
+      ],
+      [
+        0.0032830697251358784,
+        0.07391569404813764,
+        0.01647004500123188,
+        0.23541247598619053,
+        -0.07736288977859183,
+        0.0417717853820776,
+        -0.0396497570784464,
+        -0.02599486044140662,
+        0.024649726818270337,
+        -0.002807039457813321,
+        -0.006455445923119488,
+        0.07802370535834047
+      ],
+      [
+        0.028739933434941963,
+        -0.010693510024064346,
+        -0.047439850931371395,
+        -0.07736288977859183,
+        0.12914859411880705,
+        -0.07291232594602619,
+        0.02951043168990458,
+        0.017855384690482756,
+        0.014709977014931814,
+        0.044416666509678016,
+        -0.028106771413301753,
+        -0.02546711713831392
+      ],
+      [
+        -0.016975369004657254,
+        -0.00749098432230651,
+        -0.00742856134657842,
+        0.0417717853820776,
+        -0.07291232594602619,
+        0.12090546825697578,
+        0.006377737893986755,
+        0.011543791811062703,
+        -0.034243015306971186,
+        0.011688818106418147,
+        0.044554978718307825,
+        -0.027093449106581086
+      ],
+      [
+        0.031146518521673904,
+        -0.05641882390253825,
+        -0.07447010915883646,
+        -0.0396497570784464,
+        0.02951043168990458,
+        0.006377737893986755,
+        0.16553307202974382,
+        0.016388667754541557,
+        -0.019803118464461915,
+        -0.021040470294652856,
+        0.06252402803446301,
+        -0.04947449606031234
+      ],
+      [
+        0.010111166936326499,
+        0.02147320301156988,
+        -0.025819097345056823,
+        -0.02599486044140662,
+        0.017855384690482756,
+        0.011543791811062703,
+        0.016388667754541557,
+        0.09549208603794355,
+        0.013375839597290533,
+        -0.03832177628118156,
+        -0.022281451017781367,
+        -0.034568243802384276
+      ],
+      [
+        -0.0077879576987992605,
+        0.013553842629172386,
+        0.012284723898422405,
+        0.024649726818270337,
+        0.014709977014931814,
+        -0.034243015306971186,
+        -0.019803118464461915,
+        0.013375839597290533,
+        0.13499360726386805,
+        -0.02817279534063423,
+        -0.1337522649410556,
+        -0.020631967748751468
+      ],
+      [
+        -0.024924780049251322,
+        0.026799339697742258,
+        -0.02841511880271512,
+        -0.002807039457813321,
+        0.044416666509678016,
+        0.011688818106418147,
+        -0.021040470294652856,
+        -0.03832177628118156,
+        -0.02817279534063423,
+        0.1470478917473407,
+        0.036299942154398544,
+        -0.018573729198692292
+      ],
+      [
+        0.011493809704624597,
+        -0.021573641304556808,
+        -0.019205372117610885,
+        -0.006455445923119488,
+        -0.028106771413301753,
+        0.044554978718307825,
+        0.06252402803446301,
+        -0.022281451017781367,
+        -0.1337522649410556,
+        0.036299942154398544,
+        0.22780188785857844,
+        0.0021824694608431868
+      ],
+      [
+        -0.0006731500208013454,
+        0.0010516907278146862,
+        0.03826446608757003,
+        0.07802370535834047,
+        -0.02546711713831392,
+        -0.027093449106581086,
+        -0.04947449606031234,
+        -0.034568243802384276,
+        -0.020631967748751468,
+        -0.018573729198692292,
+        0.0021824694608431868,
+        0.10804621763313375
+      ]
+    ]
+  },
+  "exact_reference": {
+    "C_best": -1.0663920923466492,
+    "C_worst": -0.28410099248264825,
+    "optimal_asset_indices": [
+      1,
+      5,
+      6,
+      8,
+      10,
+      11
+    ],
+    "optimal_assignment": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    "feasible_count": 924,
+    "num_optimal_ties": 1,
+    "expected_optimum": -1.0663920923466492,
+    "optimum_match": true
+  },
+  "settings": {
+    "depths": [
+      1,
+      2,
+      3
+    ],
+    "n_starts": 5,
+    "optimizer": "scipy.optimize.minimize:COBYLA",
+    "maxiter": 1500,
+    "base_seed": 2026,
+    "shots": 4096,
+    "note": "Constraint-preserving XY ring mixer; no penalty; exact subspace simulation replaces the full circuit in the loop"
+  },
+  "package_versions": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "0.4.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "rustworkx": "0.18.1"
+  }
+}

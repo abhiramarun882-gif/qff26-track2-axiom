@@ -1,0 +1,360 @@
+{
+  "team": "axiom",
+  "phase": 3,
+  "study": "final_followup_validation",
+  "generated_utc": "2026-10-13T13:38:28.187646+00:00",
+  "scope": "n=12 cross-validation of the full-space simulators used by Methods B and C against independent Qiskit circuits. This supersedes nothing: the n=6 checks in validation_report.json remain, and these are genuinely new n=12 measurements.",
+  "python": "3.13.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "overall_status": "fresh",
+  "timeout_per_circuit_s": 600.0,
+  "methodology": {
+    "fast_side": "p3.FullSpaceSimulator (exact amplitude-level simulation; X mixer via fast Walsh-Hadamard transform, cost via diagonal phases)",
+    "qiskit_side": "circuit constructed from scratch with QuantumCircuit + PauliEvolutionGate + Statevector; no code shared with the fast simulator",
+    "decompose_reps": 4,
+    "why_decompose": "Statevector applies an opaque PauliEvolutionGate by exponentiating its generator matrix. At n=12 that costs ~14 s per cost layer and >386 s per X-mixer layer (measured), so the undecomposed circuit cannot complete inside 600 s. QuantumCircuit.decompose expands the gate to the definition Qiskit itself gives it, which is unitary-preserving and runs in ~0.04 s at n=12 p=3.",
+    "decomposition_faithfulness": {
+      "status": "fresh",
+      "description": "n=6 cross-check of the simulation methodology: the same Qiskit circuit is simulated both with opaque PauliEvolutionGate gates and after QuantumCircuit.decompose(reps=4). This measures, rather than assumes, that decompose is unitary-preserving before it is relied on at n=12.",
+      "decompose_reps": 4,
+      "worst_fidelity": 0.9999999999999787,
+      "worst_abs_energy_diff": 1.5987211554602254e-14,
+      "tolerances": {
+        "fidelity": 0.999999,
+        "abs_energy_diff": 1e-12
+      },
+      "passed": true,
+      "records": {
+        "B_p1": {
+          "n": 6,
+          "fidelity_undecomposed_vs_decomposed": 0.9999999999999969,
+          "max_abs_statevector_diff": 2.183724041757888e-15,
+          "abs_energy_diff": 1.1546319456101628e-14,
+          "depth_undecomposed": 3,
+          "size_undecomposed": 8,
+          "depth_decomposed": 30,
+          "size_decomposed": 63
+        },
+        "B_p2": {
+          "n": 6,
+          "fidelity_undecomposed_vs_decomposed": 1.0000000000000009,
+          "max_abs_statevector_diff": 6.224740907470601e-15,
+          "abs_energy_diff": 2.220446049250313e-15,
+          "depth_undecomposed": 5,
+          "size_undecomposed": 10,
+          "depth_decomposed": 50,
+          "size_decomposed": 120
+        },
+        "B_p3": {
+          "n": 6,
+          "fidelity_undecomposed_vs_decomposed": 1.0000000000000009,
+          "max_abs_statevector_diff": 5.925149092659698e-15,
+          "abs_energy_diff": 1.5987211554602254e-14,
+          "depth_undecomposed": 7,
+          "size_undecomposed": 12,
+          "depth_decomposed": 70,
+          "size_decomposed": 177
+        },
+        "C_p1": {
+          "n": 6,
+          "fidelity_undecomposed_vs_decomposed": 0.9999999999999991,
+          "max_abs_statevector_diff": 1.159106867033638e-15,
+          "abs_energy_diff": 9.769962616701378e-15,
+          "depth_undecomposed": 3,
+          "size_undecomposed": 8,
+          "depth_decomposed": 30,
+          "size_decomposed": 63
+        },
+        "C_p2": {
+          "n": 6,
+          "fidelity_undecomposed_vs_decomposed": 0.9999999999999942,
+          "max_abs_statevector_diff": 4.6497009778816265e-15,
+          "abs_energy_diff": 7.993605777301127e-15,
+          "depth_undecomposed": 5,
+          "size_undecomposed": 10,
+          "depth_decomposed": 50,
+          "size_decomposed": 120
+        },
+        "C_p3": {
+          "n": 6,
+          "fidelity_undecomposed_vs_decomposed": 0.9999999999999787,
+          "max_abs_statevector_diff": 4.963172102894503e-15,
+          "abs_energy_diff": 2.6645352591003757e-15,
+          "depth_undecomposed": 7,
+          "size_undecomposed": 12,
+          "depth_decomposed": 70,
+          "size_decomposed": 177
+        }
+      }
+    }
+  },
+  "decomposition_faithfulness": {
+    "status": "fresh",
+    "description": "n=6 cross-check of the simulation methodology: the same Qiskit circuit is simulated both with opaque PauliEvolutionGate gates and after QuantumCircuit.decompose(reps=4). This measures, rather than assumes, that decompose is unitary-preserving before it is relied on at n=12.",
+    "decompose_reps": 4,
+    "worst_fidelity": 0.9999999999999787,
+    "worst_abs_energy_diff": 1.5987211554602254e-14,
+    "tolerances": {
+      "fidelity": 0.999999,
+      "abs_energy_diff": 1e-12
+    },
+    "passed": true,
+    "records": {
+      "B_p1": {
+        "n": 6,
+        "fidelity_undecomposed_vs_decomposed": 0.9999999999999969,
+        "max_abs_statevector_diff": 2.183724041757888e-15,
+        "abs_energy_diff": 1.1546319456101628e-14,
+        "depth_undecomposed": 3,
+        "size_undecomposed": 8,
+        "depth_decomposed": 30,
+        "size_decomposed": 63
+      },
+      "B_p2": {
+        "n": 6,
+        "fidelity_undecomposed_vs_decomposed": 1.0000000000000009,
+        "max_abs_statevector_diff": 6.224740907470601e-15,
+        "abs_energy_diff": 2.220446049250313e-15,
+        "depth_undecomposed": 5,
+        "size_undecomposed": 10,
+        "depth_decomposed": 50,
+        "size_decomposed": 120
+      },
+      "B_p3": {
+        "n": 6,
+        "fidelity_undecomposed_vs_decomposed": 1.0000000000000009,
+        "max_abs_statevector_diff": 5.925149092659698e-15,
+        "abs_energy_diff": 1.5987211554602254e-14,
+        "depth_undecomposed": 7,
+        "size_undecomposed": 12,
+        "depth_decomposed": 70,
+        "size_decomposed": 177
+      },
+      "C_p1": {
+        "n": 6,
+        "fidelity_undecomposed_vs_decomposed": 0.9999999999999991,
+        "max_abs_statevector_diff": 1.159106867033638e-15,
+        "abs_energy_diff": 9.769962616701378e-15,
+        "depth_undecomposed": 3,
+        "size_undecomposed": 8,
+        "depth_decomposed": 30,
+        "size_decomposed": 63
+      },
+      "C_p2": {
+        "n": 6,
+        "fidelity_undecomposed_vs_decomposed": 0.9999999999999942,
+        "max_abs_statevector_diff": 4.6497009778816265e-15,
+        "abs_energy_diff": 7.993605777301127e-15,
+        "depth_undecomposed": 5,
+        "size_undecomposed": 10,
+        "depth_decomposed": 50,
+        "size_decomposed": 120
+      },
+      "C_p3": {
+        "n": 6,
+        "fidelity_undecomposed_vs_decomposed": 0.9999999999999787,
+        "max_abs_statevector_diff": 4.963172102894503e-15,
+        "abs_energy_diff": 2.6645352591003757e-15,
+        "depth_undecomposed": 7,
+        "size_undecomposed": 12,
+        "depth_decomposed": 70,
+        "size_decomposed": 177
+      }
+    }
+  },
+  "prior_attempts": {
+    "status": "superseded_by_corrected_run",
+    "why": "The first attempt simulated the opaque-gate circuit directly. Qiskit's Statevector exponentiates the PauliEvolutionGate generator matrix instead of using the gate's own definition, costing >386 s per X-mixer layer at n=12; both circuits hit the 600 s timeout with no reference state obtained. This run expands the circuit to its own definition before simulation (unitary-preserving) and reproduces the same comparison.",
+    "generated_utc": "2026-10-13T13:11:56.198119+00:00",
+    "overall_status": "incomplete",
+    "methods": {
+      "B": {
+        "status": "timeout",
+        "p": 3,
+        "elapsed_s": 600.138,
+        "timeout_s": 600.0,
+        "error": "child process exceeded the 600s wall-clock timeout; the Qiskit reference state was never obtained, so no agreement metrics exist for this method"
+      },
+      "C": {
+        "status": "timeout",
+        "p": 3,
+        "elapsed_s": 600.171,
+        "timeout_s": 600.0,
+        "error": "child process exceeded the 600s wall-clock timeout; the Qiskit reference state was never obtained, so no agreement metrics exist for this method"
+      }
+    }
+  },
+  "methods": {
+    "B": {
+      "method": "B",
+      "description": "p3.FullSpaceSimulator (fast) vs a Qiskit circuit built from scratch with PauliEvolutionGate, at n=12, K=6, lambda=1.0",
+      "status": "fresh",
+      "timeout_s": 600.0,
+      "elapsed_s": 1.867,
+      "exit_code": 0,
+      "command": "python.exe -u -c <child Qiskit n=12 Method B p=3, circuit decomposed reps=4> D:\\abhi\\qff26-track2-axiom B 3 <theta[6]> <c[12]>",
+      "selection": {
+        "method": "B",
+        "record_index": 2,
+        "p": 3,
+        "theta": [
+          2.5545527449792162,
+          1.2640891145746114,
+          4.939295906076083,
+          1.4913434880418222,
+          0.09303681698268484,
+          1.4961771981646417
+        ],
+        "theta_is_finite": true,
+        "best_start_index": 1,
+        "reported_best_energy_C_lambda_exact": -0.5629130969386282,
+        "reported_optimal_probability_exact": 0.16086708447465148,
+        "reported_feasibility_rate_exact": 0.6907158762521433,
+        "selection_rule": "record with the highest exact optimal-solution probability in the final experiment artifact (each method's headline depth)"
+      },
+      "source_artifact": {
+        "path": "outputs\\phase3\\method_b_warm_start.json",
+        "generated_utc": "2026-10-13T01:18:20.218973+00:00",
+        "sha256": "d504f6ae1883f4106f3d0d98b0638000a590466864f585ca03a16659e9d09f01",
+        "record_index": 2,
+        "parameter_vector_source": "records[].best_theta (verbatim)"
+      },
+      "warm_start_vector_c": [
+        0.0,
+        0.5856323260560977,
+        0.3954319427543212,
+        0.0,
+        0.5386564936170488,
+        1.0,
+        0.8652355260897593,
+        9.272072469044134e-18,
+        1.0,
+        0.0,
+        0.692056696269694,
+        1.0
+      ],
+      "simulator_side": {
+        "energy_simulator": -0.5629130969386282,
+        "normalization_error_simulator": 2.220446049250313e-16,
+        "computed_in_parent_process": true
+      },
+      "qiskit_side": {
+        "energy_qiskit": -0.5629130969386291,
+        "normalization_error_qiskit": 1.3322676295501878e-15,
+        "returned_norm": 1.0000000000000004,
+        "simulation_preparation": "circuit decomposed to its own Qiskit definition via QuantumCircuit.decompose(reps=4) before Statevector; unitary-preserving, see decomposition_faithfulness",
+        "decomposed_depth": 142,
+        "decomposed_size": 678,
+        "decomposed_ops": {
+          "cx": 396,
+          "u": 282
+        }
+      },
+      "agreement": {
+        "abs_energy_diff": 8.881784197001252e-16,
+        "state_fidelity": 1.0000000000000022,
+        "total_variation_distance": 1.2446278659210569e-15,
+        "max_abs_probability_diff": 3.3306690738754696e-16,
+        "probability_l2_distance": 5.631352006447276e-16,
+        "normalization_error_simulator": 2.220446049250313e-16,
+        "normalization_error_qiskit": 1.3322676295501878e-15,
+        "tolerances": {
+          "abs_energy_diff": 1e-09,
+          "state_fidelity": 0.999999,
+          "normalization_error": 1e-12
+        }
+      },
+      "reported_vs_recomputed_energy": {
+        "reported_best_energy": -0.5629130969386282,
+        "recomputed_energy": -0.5629130969386282,
+        "abs_diff": 0.0
+      }
+    },
+    "C": {
+      "method": "C",
+      "description": "p3.FullSpaceSimulator (fast) vs a Qiskit circuit built from scratch with PauliEvolutionGate, at n=12, K=6, lambda=1.0",
+      "status": "fresh",
+      "timeout_s": 600.0,
+      "elapsed_s": 1.489,
+      "exit_code": 0,
+      "command": "python.exe -u -c <child Qiskit n=12 Method C p=3, circuit decomposed reps=4> D:\\abhi\\qff26-track2-axiom C 3 <theta[6]> <c[0]>",
+      "selection": {
+        "method": "C",
+        "record_index": 2,
+        "p": 3,
+        "theta": [
+          2.929341612419221,
+          6.342147911050788,
+          -0.01852898000104082,
+          2.8440695586438896,
+          2.3110812940146506,
+          2.550463943906359
+        ],
+        "theta_is_finite": true,
+        "best_start_index": 0,
+        "reported_best_energy_C_lambda_exact": -0.15012065049655388,
+        "reported_optimal_probability_exact": 0.0006810667767040634,
+        "reported_feasibility_rate_exact": 0.6057733756607724,
+        "selection_rule": "record with the highest exact optimal-solution probability in the final experiment artifact (each method's headline depth)"
+      },
+      "source_artifact": {
+        "path": "outputs\\phase3\\method_c_penalty_qaoa.json",
+        "generated_utc": "2026-10-13T01:18:30.960641+00:00",
+        "sha256": "ce37fa7865a4471d85954846419d4afc80c013b34398f52ec84c561bb2b10811",
+        "record_index": 2,
+        "parameter_vector_source": "records[].best_theta (verbatim)"
+      },
+      "warm_start_vector_c": null,
+      "simulator_side": {
+        "energy_simulator": -0.15012065049655388,
+        "normalization_error_simulator": 0.0,
+        "computed_in_parent_process": true
+      },
+      "qiskit_side": {
+        "energy_qiskit": -0.1501206504965538,
+        "normalization_error_qiskit": 1.7763568394002505e-15,
+        "returned_norm": 0.9999999999999992,
+        "simulation_preparation": "circuit decomposed to its own Qiskit definition via QuantumCircuit.decompose(reps=4) before Statevector; unitary-preserving, see decomposition_faithfulness",
+        "decomposed_depth": 142,
+        "decomposed_size": 678,
+        "decomposed_ops": {
+          "cx": 396,
+          "u": 282
+        }
+      },
+      "agreement": {
+        "abs_energy_diff": 8.326672684688674e-17,
+        "state_fidelity": 0.9999999999999982,
+        "total_variation_distance": 2.1276033336933082e-15,
+        "max_abs_probability_diff": 8.998878031629687e-18,
+        "probability_l2_distance": 9.91218003298283e-17,
+        "normalization_error_simulator": 0.0,
+        "normalization_error_qiskit": 1.7763568394002505e-15,
+        "tolerances": {
+          "abs_energy_diff": 1e-09,
+          "state_fidelity": 0.999999,
+          "normalization_error": 1e-12
+        }
+      },
+      "reported_vs_recomputed_energy": {
+        "reported_best_energy": -0.15012065049655388,
+        "recomputed_energy": -0.15012065049655388,
+        "abs_diff": 0.0
+      }
+    }
+  },
+  "commands": {
+    "this_script": "run_phase3_followup.py",
+    "qiskit_child": [
+      "python.exe -u -c <child Qiskit n=12 Method B p=3, circuit decomposed reps=4> D:\\abhi\\qff26-track2-axiom B 3 <theta[6]> <c[12]>",
+      "python.exe -u -c <child Qiskit n=12 Method C p=3, circuit decomposed reps=4> D:\\abhi\\qff26-track2-axiom C 3 <theta[6]> <c[0]>"
+    ]
+  },
+  "restrictions_observed": [
+    "No optimiser was rerun.",
+    "No existing experiment JSON, figure, or validation report was overwritten.",
+    "Parameter vectors were read verbatim from the final artifacts.",
+    "n=6 results are not substituted and relabelled as n=12.",
+    "Every n=12 circuit ran in its own child process under a genuine 600 s wall-clock timeout; timeouts are recorded, not hidden."
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "team": "axiom",
+  "phase": 2,
+  "generated_utc": "2026-10-12T16:08:08.083934+00:00",
+  "python": "3.13.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "package_versions": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "0.4.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "rustworkx": "0.18.1"
+  },
+  "package_versions_as_recorded_originally": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "unavailable (No module named 'qiskit_aer')",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "unavailable (No module named 'qiskit_algorithms')",
+    "numpy": "2.3.3",
+    "scipy": "1.16.2",
+    "matplotlib": "3.10.7",
+    "rustworkx": "0.18.1"
+  },
+  "metadata_correction": {
+    "corrected_utc": "2026-10-14T11:04:56+00:00",
+    "scope": "environment metadata only (package_versions); python, platform, test counts, metrics and every measured result are unchanged",
+    "reason": "the originally recorded versions conflicted with the pinned project environment (qiskit_aer/qiskit_algorithms reported unavailable; numpy/scipy/matplotlib older). Corrected from a fresh probe of the actual project interpreter (.venv, Python 3.13.14). Phase 2 optimization was NOT rerun.",
+    "original_values_preserved_under": "package_versions_as_recorded_originally"
+  },
+  "tests": {
+    "tests_run": 82,
+    "passed": 82,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "circuit_validation": {
+    "num_qubits": 6,
+    "parameter_count_by_depth": {
+      "p=1": 2,
+      "p=2": 4,
+      "p=3": 6,
+      "p=4": 8
+    },
+    "max_abs_error_explicit_vs_qaoa_ansatz": 3.952393967665557e-14,
+    "max_abs_error_statevector_vs_diagonal_contraction": 1.3322676295501878e-15,
+    "max_abs_probability_normalisation_error": 2.220446049250313e-16,
+    "max_abs_error_fast_simulator_vs_qiskit_energy": 5.329070518200751e-15,
+    "min_fidelity_fast_simulator_vs_qiskit": 0.9999999999999973,
+    "energy_tolerance": 1e-10,
+    "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+    "bit_order_convention": "asset i <-> qubit i; state index s = sum_i x_i 2^i (qubit 0 = LSB); Qiskit Pauli rightmost char is qubit 0"
+  },
+  "exact_penalty_analysis": {
+    "n": 6,
+    "K": 3,
+    "feasible_count": 20,
+    "best_feasible_unpenalized_cost": -0.5030146902647753,
+    "penalty_threshold": 0.10966122612466722,
+    "penalty_threshold_exists": true,
+    "per_lambda": {
+      "0.05": {
+        "lambda": 0.05,
+        "global_penalized_min": -0.5626759163894425,
+        "global_minimizer_index": 46,
+        "global_minimizer_assignment": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "global_minimizer_feasible": false,
+        "best_feasible_penalized_cost": -0.5030146902647753,
+        "feasible_optimum_is_global_min": false,
+        "infeasible_beats_feasible": true,
+        "gap_global_minus_feasible": -0.05966122612466718
+      },
+      "0.1": {
+        "lambda": 0.1,
+        "global_penalized_min": -0.5126759163894425,
+        "global_minimizer_index": 46,
+        "global_minimizer_assignment": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "global_minimizer_feasible": false,
+        "best_feasible_penalized_cost": -0.5030146902647753,
+        "feasible_optimum_is_global_min": false,
+        "infeasible_beats_feasible": true,
+        "gap_global_minus_feasible": -0.009661226124667244
+      },
+      "0.25": {
+        "lambda": 0.25,
+        "global_penalized_min": -0.5030146902647753,
+        "global_minimizer_index": 38,
+        "global_minimizer_assignment": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "global_minimizer_feasible": true,
+        "best_feasible_penalized_cost": -0.5030146902647753,
+        "feasible_optimum_is_global_min": true,
+        "infeasible_beats_feasible": false,
+        "gap_global_minus_feasible": 0.0
+      },
+      "0.5": {
+        "lambda": 0.5,
+        "global_penalized_min": -0.5030146902647753,
+        "global_minimizer_index": 38,
+        "global_minimizer_assignment": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "global_minimizer_feasible": true,
+        "best_feasible_penalized_cost": -0.5030146902647753,
+        "feasible_optimum_is_global_min": true,
+        "infeasible_beats_feasible": false,
+        "gap_global_minus_feasible": 0.0
+      },
+      "1": {
+        "lambda": 1.0,
+        "global_penalized_min": -0.5030146902647753,
+        "global_minimizer_index": 38,
+        "global_minimizer_assignment": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "global_minimizer_feasible": true,
+        "best_feasible_penalized_cost": -0.5030146902647753,
+        "feasible_optimum_is_global_min": true,
+        "infeasible_beats_feasible": false,
+        "gap_global_minus_feasible": 0.0
+      },
+      "2": {
+        "lambda": 2.0,
+        "global_penalized_min": -0.5030146902647753,
+        "global_minimizer_index": 38,
+        "global_minimizer_assignment": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "global_minimizer_feasible": true,
+        "best_feasible_penalized_cost": -0.5030146902647753,
+        "feasible_optimum_is_global_min": true,
+        "infeasible_beats_feasible": false,
+        "gap_global_minus_feasible": 0.0
+      },
+      "5": {
+        "lambda": 5.0,
+        "global_penalized_min": -0.5030146902647753,
+        "global_minimizer_index": 38,
+        "global_minimizer_assignment": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "global_minimizer_feasible": true,
+        "best_feasible_penalized_cost": -0.5030146902647753,
+        "feasible_optimum_is_global_min": true,
+        "infeasible_beats_feasible": false,
+        "gap_global_minus_feasible": 0.0
+      }
+    }
+  },
+  "exact_reference": {
+    "C_best": -0.5030146902647753,
+    "C_worst": -0.22197117201541114,
+    "optimal_asset_indices": [
+      1,
+      2,
+      5
+    ],
+    "optimal_assignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    "feasible_count": 20,
+    "num_optimal_ties": 1,
+    "expected_optimum": -0.5030146902647753,
+    "optimum_match": true
+  },
+  "sampling_note": "Sampled results are draws from the exact statevector distribution via a seeded multinomial; they are NOT hardware measurements. Exact-statevector metrics are reported alongside and kept separate.",
+  "metric_definitions": {
+    "C_best": "exact optimal feasible unpenalized cost",
+    "C_worst": "exact worst feasible unpenalized cost",
+    "feasible_normalized_score": "(C_worst - E[C0 | feasible]) / (C_worst - C_best); null if no feasible samples or C_worst == C_best",
+    "optimal_solution_probability": "probability mass on any globally optimal feasible portfolio"
+  },
+  "known_limitations": [
+    "Single synthetic 6-asset instance; no claim of quantum advantage.",
+    "Exhaustive search is the true reference for this small instance.",
+    "Sampled metrics come from exact-statevector multinomial draws, not hardware.",
+    "QAOA parameters are classically optimised with COBYLA (no gradient information)."
+  ]
+}

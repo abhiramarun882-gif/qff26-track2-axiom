@@ -1,0 +1,73 @@
+{
+  "team": "axiom",
+  "phase": 4,
+  "study": "hardware_awareness_and_noisy_simulation",
+  "generated_utc": "2026-10-14T10:43:04.744382+00:00",
+  "python": "3.13.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "check": "bitstring decoding (known bitstring)",
+      "passed": true,
+      "detail": "index 3426 <-> key 110101100010 (assets True)"
+    },
+    {
+      "check": "artifact provenance recorded",
+      "passed": true,
+      "detail": "outputs\\phase3\\method_a_xy_qaoa.json sha256=33b0b95ff5b3778b... p=3"
+    },
+    {
+      "check": "ideal circuit constraint preserved (weight-K support)",
+      "passed": true,
+      "detail": "infeasible mass=0.000e+00, state norm=1.000000000000"
+    },
+    {
+      "check": "trotterization gap documented (circuit vs exact subspace)",
+      "passed": true,
+      "detail": "TV=0.5827, max|dP|=2.337e-02, P(opt) circuit=0.002115 vs exact=0.006636"
+    },
+    {
+      "check": "ideal feasibility rate == 1 (constraint preserved)",
+      "passed": true,
+      "detail": "feasibility=1.000000000000"
+    },
+    {
+      "check": "transpiled subgraph respects coupling + basis",
+      "passed": true,
+      "detail": "bad_edges=0, offending_ops=[]"
+    },
+    {
+      "check": "resource metrics available",
+      "passed": true,
+      "detail": "logical depth=8782, transpiled depth=36008"
+    },
+    {
+      "check": "noisy run completed",
+      "passed": true,
+      "detail": "status=completed elapsed=549.676s timeout=1800.0s shots=1024"
+    },
+    {
+      "check": "ideal/noisy comparison produced",
+      "passed": true,
+      "detail": "TV(exact,noisy)=0.8936"
+    },
+    {
+      "check": "full test suite passed",
+      "passed": true,
+      "detail": "exit_code=0 tail=['  self._set_intXint(row, col, x.flat[0])', '..........................................', '----------------------------------------------------------------------', 'Ran 127 tests in 75.133s', '', 'OK']"
+    },
+    {
+      "check": "figures written",
+      "passed": true,
+      "detail": "2 figure(s)"
+    }
+  ],
+  "restrictions_observed": [
+    "Simulator only: no QPU, no IBM Quantum job submitted.",
+    "FakeBrisbane used only through its Target, coupling map and backend-derived noise model.",
+    "No Phase 3 optimization was rerun; the Method A parameters are read verbatim from the Phase 3 artifact.",
+    "No fabricated measurements: the noisy run executes in a child process and a timeout would be recorded, not hidden.",
+    "FakeBrisbane-derived noise is a device model, not a claim of real-hardware execution."
+  ]
+}

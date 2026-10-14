@@ -1,0 +1,277 @@
+{
+  "team": "axiom",
+  "phase": 2,
+  "generated_utc": "2026-10-12T16:08:08.083870+00:00",
+  "instance": {
+    "level": "beginner",
+    "n": 6,
+    "K": 3,
+    "q": 0.5,
+    "seed": 2026,
+    "mu": [
+      0.08578696273508724,
+      0.17798263314303092,
+      0.14345368022869703,
+      0.12410010542160961,
+      0.12098346686193025,
+      0.208103649170653
+    ],
+    "Sigma": [
+      [
+        0.01095724279263062,
+        0.0008113994408355516,
+        -0.006412962366628713,
+        -0.005551496567172206,
+        9.926465081548115e-05,
+        -0.004867340574976773
+      ],
+      [
+        0.0008113994408355516,
+        0.008779347881005647,
+        -0.0034189090896832417,
+        -0.005471573109550013,
+        0.0012794280848300325,
+        -0.008112670599749825
+      ],
+      [
+        -0.006412962366628713,
+        -0.0034189090896832417,
+        0.02641096715491648,
+        -0.011062034376030325,
+        -0.012519620011751324,
+        0.010761963700862616
+      ],
+      [
+        -0.005551496567172206,
+        -0.005471573109550013,
+        -0.011062034376030325,
+        0.0761100531149634,
+        0.03863369637203035,
+        -0.00708253977495893
+      ],
+      [
+        9.926465081548115e-05,
+        0.0012794280848300325,
+        -0.012519620011751324,
+        0.03863369637203035,
+        0.06436850118749057,
+        0.007978215833193612
+      ],
+      [
+        -0.004867340574976773,
+        -0.008112670599749825,
+        0.010761963700862616,
+        -0.00708253977495893,
+        0.007978215833193612,
+        0.01939946149643003
+      ]
+    ]
+  },
+  "exact_reference": {
+    "C_best": -0.5030146902647753,
+    "C_worst": -0.22197117201541114,
+    "optimal_asset_indices": [
+      1,
+      2,
+      5
+    ],
+    "optimal_assignment": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    "feasible_count": 20,
+    "num_optimal_ties": 1,
+    "expected_optimum": -0.5030146902647753,
+    "optimum_match": true
+  },
+  "settings": {
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "penalties": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "primary_lambda": 1.0,
+    "primary_depth": 2,
+    "n_starts": 8,
+    "optimizer": "scipy.optimize.minimize:COBYLA",
+    "maxiter": 1500,
+    "shots": 4096
+  },
+  "best_by_criterion": {
+    "criterion": "lowest best penalized expectation <H_C> over all starts",
+    "best_depth": {
+      "p": 4,
+      "lambda": 1.0,
+      "best_energy": -0.3529061494989435,
+      "best_theta": [
+        0.2969469445570995,
+        0.08225065814516717,
+        3.7145172899867562,
+        4.098268455962635,
+        1.6334529508838413,
+        2.016649515814908,
+        1.564536348994044,
+        0.9005336435340933
+      ],
+      "best_start_index": 4,
+      "starts_summary": {
+        "num_starts": 8,
+        "num_valid_finite": 8,
+        "num_successful": 3,
+        "fraction_successful": 0.375,
+        "energy_mean_successful": -0.1426981200879164,
+        "energy_std_successful": 0.24327311476576516,
+        "best_nfev": 646,
+        "median_nfev": 1500.0
+      },
+      "sampling": {
+        "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+        "shots": 4096,
+        "sample_seed": 90400,
+        "counts_checked_sum": 4096,
+        "sampled_metrics": {
+          "expected_penalized_cost": -0.3517932943497584,
+          "feasibility_rate": 0.984130859375,
+          "optimal_solution_probability": 0.048828125,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3793440126686572,
+          "feasible_normalized_score": 0.5599589758679735,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 4031.0,
+          "total_mass": 4096.0
+        },
+        "exact_statevector_metrics": {
+          "expected_penalized_cost": -0.3529061494989432,
+          "feasibility_rate": 0.9851801369252918,
+          "optimal_solution_probability": 0.047673102631526736,
+          "best_feasible_unpenalized_cost": -0.5030146902647753,
+          "mean_c0_conditioned_on_feasible": -0.3790063649732908,
+          "feasible_normalized_score": 0.5587575687070128,
+          "C_best": -0.5030146902647753,
+          "C_worst": -0.22197117201541114,
+          "feasible_mass": 0.9851801369252918,
+          "total_mass": 1.0
+        }
+      }
+    },
+    "recommended_penalty": {
+      "criterion": "smallest tested lambda that is >= the exact penalty threshold (so the feasible optimum is a global penalized minimum)",
+      "penalty_threshold": 0.10966122612466722,
+      "selected": {
+        "p": 2,
+        "lambda": 0.25,
+        "best_energy": -0.34460690205182587,
+        "best_theta": [
+          1.2659131498820984,
+          4.309750312549969,
+          2.848588962852592,
+          -0.09304491176765922
+        ],
+        "best_start_index": 3,
+        "starts_summary": {
+          "num_starts": 8,
+          "num_valid_finite": 8,
+          "num_successful": 2,
+          "fraction_successful": 0.25,
+          "energy_mean_successful": -0.08372427096306652,
+          "energy_std_successful": 0.049231637171399265,
+          "best_nfev": 341,
+          "median_nfev": 1500.0
+        },
+        "sampling": {
+          "sampling_method": "exact-statevector multinomial draw (numpy default_rng); NOT hardware measurement",
+          "shots": 4096,
+          "sample_seed": 92250,
+          "counts_checked_sum": 4096,
+          "sampled_metrics": {
+            "expected_penalized_cost": -0.3430186868599355,
+            "feasibility_rate": 0.750732421875,
+            "optimal_solution_probability": 0.043212890625,
+            "best_feasible_unpenalized_cost": -0.5030146902647753,
+            "mean_c0_conditioned_on_feasible": -0.38554263926147725,
+            "feasible_normalized_score": 0.5820147294801957,
+            "C_best": -0.5030146902647753,
+            "C_worst": -0.22197117201541114,
+            "feasible_mass": 3075.0,
+            "total_mass": 4096.0
+          },
+          "exact_statevector_metrics": {
+            "expected_penalized_cost": -0.3446069020518257,
+            "feasibility_rate": 0.7619133414094718,
+            "optimal_solution_probability": 0.04406519126726318,
+            "best_feasible_unpenalized_cost": -0.5030146902647753,
+            "mean_c0_conditioned_on_feasible": -0.3859065783486147,
+            "feasible_normalized_score": 0.5833096858250509,
+            "C_best": -0.5030146902647753,
+            "C_worst": -0.22197117201541114,
+            "feasible_mass": 0.7619133414094718,
+            "total_mass": 1.0
+          }
+        }
+      }
+    }
+  },
+  "random_feasible_baseline": {
+    "method": "uniform draws over the feasible set",
+    "seed": 2057,
+    "n_draws": 10000,
+    "mean_unpenalized_cost": -0.3814669417087031,
+    "best_unpenalized_cost": -0.5030146902647753,
+    "worst_unpenalized_cost": -0.22197117201541114,
+    "C_best": -0.5030146902647753,
+    "C_worst": -0.22197117201541114
+  },
+  "figures": [
+    "outputs\\phase2\\figures\\depth_score_vs_p.png",
+    "outputs\\phase2\\figures\\depth_energy_vs_p.png",
+    "outputs\\phase2\\figures\\penalty_feasibility_vs_lambda.png",
+    "outputs\\phase2\\figures\\penalty_optimalprob_vs_lambda.png",
+    "outputs\\phase2\\figures\\penalty_bestcost_vs_lambda.png",
+    "outputs\\phase2\\figures\\exact_groundstate_feasible_vs_lambda.png"
+  ],
+  "package_versions": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "0.4.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "rustworkx": "0.18.1"
+  },
+  "package_versions_as_recorded_originally": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "unavailable (No module named 'qiskit_aer')",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "unavailable (No module named 'qiskit_algorithms')",
+    "numpy": "2.3.3",
+    "scipy": "1.16.2",
+    "matplotlib": "3.10.7",
+    "rustworkx": "0.18.1"
+  },
+  "metadata_correction": {
+    "corrected_utc": "2026-10-14T11:04:56+00:00",
+    "scope": "environment metadata only (package_versions); all measured results are unchanged and Phase 2 was NOT rerun",
+    "reason": "the originally recorded versions conflicted with the pinned project environment (.venv, Python 3.13.14); corrected from a fresh probe of the actual project interpreter",
+    "original_values_preserved_under": "package_versions_as_recorded_originally"
+  },
+  "reproduction": {
+    "command": ".venv\\Scripts\\python.exe run_phase2.py",
+    "python": "3.13.14"
+  }
+}

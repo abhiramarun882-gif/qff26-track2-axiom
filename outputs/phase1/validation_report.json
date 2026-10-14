@@ -1,0 +1,145 @@
+{
+  "team": "axiom",
+  "phase": 1,
+  "generated_utc": "2026-10-12T14:50:27.824546+00:00",
+  "python": "3.13.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "package_versions": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "0.4.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "rustworkx": "0.18.1"
+  },
+  "seed": 2026,
+  "q": 0.5,
+  "data_generation": {
+    "procedure": "rng=np.random.default_rng(seed); mu=uniform(.05,.25,n); A=normal(0,.1,(n,n)); Sigma=A@A.T (no symmetrisation)",
+    "beginner": {
+      "n": 6,
+      "K": 3,
+      "feasible": 20
+    },
+    "intermediate": {
+      "n": 12,
+      "K": 6,
+      "feasible": 924
+    }
+  },
+  "tests": {
+    "tests_run": 49,
+    "passed": 49,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "numeric_agreement": {
+    "qubo_vs_direct": {
+      "beginner_max_abs_error": 4.440892098500626e-15,
+      "intermediate_max_abs_error": 3.552713678800501e-14,
+      "tolerance": 1e-09
+    },
+    "pauli_vs_direct": {
+      "beginner_max_abs_error": 2.6645352591003757e-15,
+      "intermediate_max_abs_error": 1.2434497875801753e-14,
+      "tolerance": 1e-09
+    }
+  },
+  "enumeration": {
+    "beginner_feasible": 20,
+    "beginner_expected": 20,
+    "intermediate_feasible": 924,
+    "intermediate_expected": 924,
+    "independent_agreement_beginner": true,
+    "independent_agreement_intermediate": true
+  },
+  "exact_optima": {
+    "beginner": {
+      "cost": -0.5030146902647753,
+      "asset_indices": [
+        1,
+        2,
+        5
+      ],
+      "assignment": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "num_ties": 1
+    },
+    "intermediate": {
+      "cost": -1.0663920923466492,
+      "asset_indices": [
+        1,
+        5,
+        6,
+        8,
+        10,
+        11
+      ],
+      "assignment": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "num_ties": 1
+    }
+  },
+  "xy_mixer": {
+    "hermiticity_max_abs": {
+      "n=4": 0.0,
+      "n=6": 0.0
+    },
+    "commutator_norm_n6": 0.0,
+    "excitation_conserved": true,
+    "not_x_only": true,
+    "ring_edges_n6": 6,
+    "n2_doubling_documented": true,
+    "subspace_dims": {
+      "weight3_n6": 20,
+      "weight6_n12": 924
+    }
+  },
+  "initial_state": {
+    "beginner": {
+      "dimension": 64,
+      "expected_nonzero": 20,
+      "nonzero_amplitudes": 20,
+      "support_count": 20,
+      "support_is_weight_K": true,
+      "norm": 0.9999999999999999,
+      "norm_error": 1.1102230246251565e-16
+    },
+    "intermediate": {
+      "dimension": 4096,
+      "expected_nonzero": 924,
+      "nonzero_amplitudes": 924,
+      "support_count": 924,
+      "support_is_weight_K": true,
+      "norm": 0.9999999999999971,
+      "norm_error": 2.886579864025407e-15
+    }
+  },
+  "bit_order_convention": "asset i <-> qubit i; state index s = sum_i x_i 2^i (qubit 0 = least significant bit). Qiskit Pauli strings: rightmost character is qubit 0. Operator matrix index s must equal cost_penalized(index_to_assets(s, n)).",
+  "known_limitations": [
+    "DickeStatePreparation removed in Qiskit 2.x; uniform fixed-weight state is built as an explicit amplitude vector via StatePreparation.",
+    "The XY ring mixer uses the literal periodic expression; for n=2 the single edge is listed twice and the effective coupling doubles (documented, not deduplicated).",
+    "Cost is a synthetic benchmark, not a market-data model."
+  ]
+}

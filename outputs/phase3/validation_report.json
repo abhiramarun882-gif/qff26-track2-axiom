@@ -1,0 +1,351 @@
+{
+  "team": "axiom",
+  "phase": 3,
+  "study": "validation_report",
+  "generated_utc": "2026-10-13T12:30:37.289844+00:00",
+  "validation_scope": "Targeted regeneration of this validation report only. The final Phase 3 experiment JSON files and figures were preserved, not rerun and not overwritten. This is NOT a full end-to-end rerun of run_phase3.py.",
+  "python": "3.13.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "package_versions": {
+    "qiskit": "2.5.2",
+    "qiskit_aer": "0.17.2",
+    "qiskit_ibm_runtime": "0.50.0",
+    "qiskit_algorithms": "0.4.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "rustworkx": "0.18.1"
+  },
+  "final_artifacts": [
+    {
+      "name": "continuous_relaxation.json",
+      "kind": "experiment_json",
+      "path": "outputs\\phase3\\continuous_relaxation.json",
+      "present": true,
+      "mtime_utc": "2026-10-13T00:51:41.421961+00:00",
+      "bytes": 15564,
+      "sha256": "951331fc2e99a5c200d33359d9e4a9834aabec269535a42d99c0393084fc2035",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "classical_baselines.json",
+      "kind": "experiment_json",
+      "path": "outputs\\phase3\\classical_baselines.json",
+      "present": true,
+      "mtime_utc": "2026-10-13T00:51:42.776524+00:00",
+      "bytes": 22448,
+      "sha256": "ea283671b12f220d169b514b4352abaf09479a9681f68c0332a46a98367c16fb",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "method_a_xy_qaoa.json",
+      "kind": "experiment_json",
+      "path": "outputs\\phase3\\method_a_xy_qaoa.json",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:03:44.412504+00:00",
+      "bytes": 27690,
+      "sha256": "33b0b95ff5b3778bcb16818ed48609ce63254bcf68ed0fc35ed4172d4ac9a67f",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "method_b_warm_start.json",
+      "kind": "experiment_json",
+      "path": "outputs\\phase3\\method_b_warm_start.json",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:20.214533+00:00",
+      "bytes": 25375,
+      "sha256": "d504f6ae1883f4106f3d0d98b0638000a590466864f585ca03a16659e9d09f01",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "method_c_penalty_qaoa.json",
+      "kind": "experiment_json",
+      "path": "outputs\\phase3\\method_c_penalty_qaoa.json",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:30.955754+00:00",
+      "bytes": 23869,
+      "sha256": "ce37fa7865a4471d85954846419d4afc80c013b34398f52ec84c561bb2b10811",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "comparison_summary.json",
+      "kind": "experiment_json",
+      "path": "outputs\\phase3\\comparison_summary.json",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:54.476242+00:00",
+      "bytes": 19659,
+      "sha256": "cc8d7d46121b193b0e51034d9a69c907e5a8050af2f3b4ed96b274fd8f4e4466",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "figure_data.json",
+      "kind": "experiment_json",
+      "path": "outputs\\phase3\\figure_data.json",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:55.779494+00:00",
+      "bytes": 6325,
+      "sha256": "722dcee6bade263d935d35ea5edda5e2eb3b48210e3a6d1a300dff9b2b557109",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "best_feasible_vs_method_depth.png",
+      "kind": "figure",
+      "path": "outputs\\phase3\\figures\\best_feasible_vs_method_depth.png",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:54.984891+00:00",
+      "bytes": 38428,
+      "sha256": "6e22d2677318de1d396f6e621ae09bb5a6aae62076a447c6c8dff9b9b0ccb843",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "feasibility_vs_depth.png",
+      "kind": "figure",
+      "path": "outputs\\phase3\\figures\\feasibility_vs_depth.png",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:55.238943+00:00",
+      "bytes": 44630,
+      "sha256": "b564b200bd603eb6bece0e5c69fe460a0d5378a5f68d29a32420824103dfc4bf",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "optimal_prob_vs_depth.png",
+      "kind": "figure",
+      "path": "outputs\\phase3\\figures\\optimal_prob_vs_depth.png",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:55.114317+00:00",
+      "bytes": 53434,
+      "sha256": "a60dae2de88517acfd2e23fd0428cf223405b3f8e8cb1d1fd47721961eef0ea2",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "runtime_vs_objective.png",
+      "kind": "figure",
+      "path": "outputs\\phase3\\figures\\runtime_vs_objective.png",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:55.668112+00:00",
+      "bytes": 35113,
+      "sha256": "f7248c9a718781324cf058916990c92c6a533947928885513ce30fafdcc46645",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "sampling_mass_best_runs.png",
+      "kind": "figure",
+      "path": "outputs\\phase3\\figures\\sampling_mass_best_runs.png",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:55.763775+00:00",
+      "bytes": 26742,
+      "sha256": "8d05a427f024f1fbfb5a487ec3d926a43ba0bf79b5a4a6022b91dc35b0f9e7d1",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "sa_objective_distribution.png",
+      "kind": "figure",
+      "path": "outputs\\phase3\\figures\\sa_objective_distribution.png",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:55.493923+00:00",
+      "bytes": 28782,
+      "sha256": "befea7ba69672603d51febeb4b07cadede5f79c47fa9968dcb3ea6f10829d1c4",
+      "status": "preserved - not rerun, not overwritten by this script"
+    },
+    {
+      "name": "start_objective_distributions.png",
+      "kind": "figure",
+      "path": "outputs\\phase3\\figures\\start_objective_distributions.png",
+      "present": true,
+      "mtime_utc": "2026-10-13T01:18:55.365635+00:00",
+      "bytes": 24897,
+      "sha256": "6a700c57dd1c911c0c9d2786b7c40227a0275e4b650bcdf910a024f0f653b44f",
+      "status": "preserved - not rerun, not overwritten by this script"
+    }
+  ],
+  "tests": {
+    "command": "D:\\abhi\\qff26-track2-axiom\\.venv\\Scripts\\python.exe -u -m unittest discover -s tests -t .",
+    "cwd": "D:\\abhi\\qff26-track2-axiom",
+    "exit_code": 0,
+    "wall_clock_s": 3.311,
+    "log_file": "logs/phase3-tests.log",
+    "tests_run": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 104,
+    "source": "measured fresh by this run (child process, real exit code)"
+  },
+  "fresh_checks": {
+    "method_a_subspace_vs_qiskit_n12": {
+      "status": "fresh",
+      "description": "WeightSubspaceSimulator (Method A, weight-K subspace) vs the full Qiskit circuit restricted to the weight-K amplitudes, evaluated at n=12, K=6, seed 20260303",
+      "tolerance": {
+        "fidelity": 0.999999,
+        "abs_energy_diff": 1e-09
+      },
+      "timeout_s": 600.0,
+      "checks": [
+        {
+          "p": 1,
+          "status": "fresh",
+          "timeout_s": 600.0,
+          "elapsed_s": 46.08,
+          "exit_code": 0,
+          "command": "python.exe -u -c <child n=12 Method A depth=1> D:\\abhi\\qff26-track2-axiom 1",
+          "rows": [
+            {
+              "p": 1,
+              "theta_seed": 20260303,
+              "fidelity_subspace_vs_qiskit": 1.0000000000000004,
+              "energy_subspace": -0.6195084731138614,
+              "energy_qiskit_feasible_conditioned": -0.6195084731138562,
+              "abs_energy_diff": 5.218048215738236e-15,
+              "infeasible_mass_qiskit": 3.965716643961059e-13,
+              "qiskit_circuit_depth": 3,
+              "state_preparation_note": "StatePreparation is synthesised by Qiskit for this one-off reference; not used in loops"
+            }
+          ]
+        },
+        {
+          "p": 3,
+          "status": "fresh",
+          "timeout_s": 600.0,
+          "elapsed_s": 133.923,
+          "exit_code": 0,
+          "command": "python.exe -u -c <child n=12 Method A depth=3> D:\\abhi\\qff26-track2-axiom 3",
+          "rows": [
+            {
+              "p": 3,
+              "theta_seed": 20260303,
+              "fidelity_subspace_vs_qiskit": 1.0,
+              "energy_subspace": -0.7156656172943808,
+              "energy_qiskit_feasible_conditioned": -0.7156656172943808,
+              "abs_energy_diff": 0.0,
+              "infeasible_mass_qiskit": 3.992361996552063e-13,
+              "qiskit_circuit_depth": 7,
+              "state_preparation_note": "StatePreparation is synthesised by Qiskit for this one-off reference; not used in loops"
+            }
+          ]
+        }
+      ]
+    },
+    "method_b_full_vs_qiskit_n6": {
+      "status": "fresh",
+      "method": "B",
+      "instance": {
+        "n": 6,
+        "K": 3,
+        "lambda": 1.0
+      },
+      "seed": 991,
+      "source": "measured fresh by this run (run_phase3._validate_full_space)",
+      "wall_clock_s": 0.548,
+      "min_fidelity_vs_qiskit": 0.9999999999999964,
+      "max_abs_energy_diff": 1.5987211554602254e-14,
+      "tolerance": {
+        "fidelity": 0.999999,
+        "abs_energy_diff": 1e-09
+      },
+      "rows": [
+        {
+          "p": 1,
+          "fidelity_vs_qiskit": 0.9999999999999964,
+          "abs_energy_diff": 9.769962616701378e-15
+        },
+        {
+          "p": 2,
+          "fidelity_vs_qiskit": 1.0000000000000013,
+          "abs_energy_diff": 2.220446049250313e-15
+        },
+        {
+          "p": 3,
+          "fidelity_vs_qiskit": 1.0000000000000009,
+          "abs_energy_diff": 1.5987211554602254e-14
+        }
+      ]
+    },
+    "method_c_full_vs_qiskit_n6": {
+      "status": "fresh",
+      "method": "C",
+      "instance": {
+        "n": 6,
+        "K": 3,
+        "lambda": 1.0
+      },
+      "seed": 991,
+      "source": "measured fresh by this run (run_phase3._validate_full_space)",
+      "wall_clock_s": 0.357,
+      "min_fidelity_vs_qiskit": 0.9999999999999876,
+      "max_abs_energy_diff": 1.0036416142611415e-13,
+      "tolerance": {
+        "fidelity": 0.999999,
+        "abs_energy_diff": 1e-09
+      },
+      "rows": [
+        {
+          "p": 1,
+          "fidelity_vs_qiskit": 1.0000000000000013,
+          "abs_energy_diff": 9.992007221626409e-15
+        },
+        {
+          "p": 2,
+          "fidelity_vs_qiskit": 0.999999999999996,
+          "abs_energy_diff": 1.865174681370263e-14
+        },
+        {
+          "p": 3,
+          "fidelity_vs_qiskit": 0.9999999999999876,
+          "abs_energy_diff": 1.0036416142611415e-13
+        }
+      ]
+    }
+  },
+  "earlier_run_reference": null,
+  "exact_reference": {
+    "source": "outputs/phase3/comparison_summary.json (final run 2026-10-13 06:48:54 local)",
+    "C_best": -1.0663920923466492,
+    "C_worst": -0.28410099248264825,
+    "optimal_asset_indices": [
+      1,
+      5,
+      6,
+      8,
+      10,
+      11
+    ],
+    "feasible_count": 924,
+    "num_optimal_ties": 1
+  },
+  "continuous_relaxation_check": {
+    "source": "outputs/phase3/continuous_relaxation.json (final run 2026-10-13 06:21:41 local)",
+    "relaxation_objective": -1.1201435505438364,
+    "C_best": -1.0663920923466492,
+    "relaxation_is_lower_bound": true,
+    "gap": -0.053751458197187185,
+    "rounded_portfolio_is_optimal": true
+  },
+  "sampling_note": "Sampled results are draws from the exact statevector distribution via a seeded multinomial; they are NOT hardware measurements. Exact-statevector metrics are reported alongside and kept separate.",
+  "metric_definitions": {
+    "C_best": "exact optimal feasible unpenalized cost",
+    "C_worst": "exact worst feasible unpenalized cost",
+    "feasible_normalized_score": "(C_worst - E[C0 | feasible]) / (C_worst - C_best); null if no feasible mass or C_worst == C_best",
+    "optimal_solution_probability": "probability mass on any globally optimal feasible portfolio",
+    "gap_to_optimum": "objective - C_best (0 is optimal)"
+  },
+  "known_limitations": [
+    "Single synthetic 12-asset instance; exhaustive search is the true reference.",
+    "Classical greedy already attains the exact optimum; SA matches it, so no quantum advantage is demonstrated.",
+    "Sampled metrics come from exact-statevector multinomial draws, not hardware.",
+    "QAOA parameters are optimised with COBYLA; Method A uses an exact subspace simulation in the loop and a Qiskit circuit only for validation.",
+    "Circuit depths reported are logical (StatePreparation and PauliEvolutionGate are opaque), not transpiled depths.",
+    "This validation report was regenerated in targeted mode; the n=12 Method A reference check is subject to a 600 s wall-clock timeout and is labelled per depth."
+  ],
+  "commands": {
+    "this_script": "run_phase3_validation.py",
+    "tests": "D:\\abhi\\qff26-track2-axiom\\.venv\\Scripts\\python.exe -u -m unittest discover -s tests -t .",
+    "n12_method_a_child": [
+      "python.exe -u -c <child n=12 Method A depth=1> D:\\abhi\\qff26-track2-axiom 1",
+      "python.exe -u -c <child n=12 Method A depth=3> D:\\abhi\\qff26-track2-axiom 3"
+    ]
+  },
+  "timestamps": {
+    "started_local_machine": "2026-10-13T12:27:30.447595+00:00",
+    "finished_utc": "2026-10-13T12:30:37.483956+00:00"
+  }
+}

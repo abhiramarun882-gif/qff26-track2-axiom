@@ -1,0 +1,240 @@
+{
+  "team": "axiom",
+  "phase": 3,
+  "study": "intermediate_penalty_threshold",
+  "generated_utc": "2026-10-13T13:38:20.505294+00:00",
+  "python": "3.13.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "formula": "lambda* = max_{x: |x| != K} max(0, (C_best - C_0(x)) / (|x| - K)^2)",
+  "instance": {
+    "level": "intermediate",
+    "n": 12,
+    "K": 6,
+    "q": 0.5,
+    "seed": 2026
+  },
+  "exact_reference": {
+    "source": "phase1_core.exact_benchmark + independent enumeration",
+    "C_best": -1.0663920923466492,
+    "C_worst": -0.28410099248264825,
+    "optimal_asset_indices": [
+      1,
+      5,
+      6,
+      8,
+      10,
+      11
+    ],
+    "feasible_count": 924,
+    "num_optimal_ties": 1,
+    "expected_optimum": -1.0663920923466492
+  },
+  "lambda_star": 0.14936848561939664,
+  "path_1": {
+    "path": "path_1_scalar_loop",
+    "description": "scalar loop over all 4096 indices using phase1_core.index_to_assets + phase1_core.cost_unpenalized (which validates each assignment is binary)",
+    "assignments_scanned": 4096,
+    "infeasible_assignments_considered": 3172,
+    "lambda_star": 0.14936848561939664,
+    "argmax": {
+      "index": 3442,
+      "asset_indices": [
+        1,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11
+      ],
+      "assignment": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "cardinality": 7,
+      "C_0": -1.2157605779660459,
+      "numerator_C_best_minus_C0": 0.14936848561939664,
+      "denominator_cardinality_minus_K_squared": 1.0,
+      "ratio": 0.14936848561939664
+    }
+  },
+  "path_2": {
+    "path": "path_2_vectorised_bitshift",
+    "description": "vectorised: bits built by bit-shift, quadratic form as a single matrix product, all 4096 rows at once; shares no scalar helper with path 1",
+    "assignments_scanned": 4096,
+    "infeasible_assignments_considered": 3172,
+    "lambda_star": 0.14936848561939664,
+    "argmax": {
+      "index": 3442,
+      "asset_indices": [
+        1,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11
+      ],
+      "assignment": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "cardinality": 7,
+      "C_0": -1.2157605779660459,
+      "numerator_C_best_minus_C0": 0.14936848561939664,
+      "denominator_cardinality_minus_K_squared": 1.0,
+      "ratio": 0.14936848561939664
+    },
+    "all_argmax_indices": [
+      3442
+    ]
+  },
+  "cross_checks": {
+    "feasible_min_equals_C_best": true,
+    "feasible_min_from_path_2": -1.0663920923466492,
+    "lambda_star_paths_agree": true,
+    "argmax_index_paths_agree": true,
+    "argmax_C0_paths_agree": true,
+    "tie_confirmed_by_cost_penalized_loop": true,
+    "tie_gap_via_loop": 0.0
+  },
+  "maximizing_assignment": {
+    "index": 3442,
+    "asset_indices": [
+      1,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11
+    ],
+    "assignment": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    "cardinality": 7,
+    "C_0": -1.2157605779660459,
+    "numerator_C_best_minus_C0": 0.14936848561939664,
+    "denominator_cardinality_minus_K_squared": 1.0,
+    "ratio": 0.14936848561939664,
+    "penalized_objective_at_lambda_star": -1.0663920923466492,
+    "C_best": -1.0663920923466492
+  },
+  "tie_at_threshold": {
+    "creates_tie_with_feasible_optimum": true,
+    "explanation": "At lambda = lambda* the maximizing infeasible assignment has penalized objective exactly equal to C_best by construction (equality holds in the defining inequality), so the feasible optimum is a global minimiser but not the unique one.",
+    "num_global_minimisers_at_lambda_star": 2,
+    "global_minimizer_indices_at_lambda_star": [
+      3426,
+      3442
+    ],
+    "contains_feasible_optimum": true,
+    "contains_maximizing_assignment": true,
+    "global_minimisers_just_above_lambda_star": [
+      3426
+    ],
+    "num_global_minimisers_just_above_lambda_star": 1,
+    "unique_above_threshold": true,
+    "global_minimisers_just_below_lambda_star": [
+      3442
+    ],
+    "num_global_minimisers_just_below_lambda_star": 1,
+    "feasible_optimum_beaten_below_threshold": true,
+    "delta_used": 2e-06
+  },
+  "required_lambda_by_cardinality": {
+    "0": {
+      "num_assignments": 1,
+      "max_required_lambda": 0.0
+    },
+    "1": {
+      "num_assignments": 12,
+      "max_required_lambda": 0.0
+    },
+    "2": {
+      "num_assignments": 66,
+      "max_required_lambda": 0.0
+    },
+    "3": {
+      "num_assignments": 220,
+      "max_required_lambda": 0.0
+    },
+    "4": {
+      "num_assignments": 495,
+      "max_required_lambda": 0.0
+    },
+    "5": {
+      "num_assignments": 792,
+      "max_required_lambda": 0.0
+    },
+    "7": {
+      "num_assignments": 792,
+      "max_required_lambda": 0.14936848561939664
+    },
+    "8": {
+      "num_assignments": 495,
+      "max_required_lambda": 0.0813602269114137
+    },
+    "9": {
+      "num_assignments": 220,
+      "max_required_lambda": 0.043837068183304434
+    },
+    "10": {
+      "num_assignments": 66,
+      "max_required_lambda": 0.027037021779055773
+    },
+    "11": {
+      "num_assignments": 12,
+      "max_required_lambda": 0.02002237833822642
+    },
+    "12": {
+      "num_assignments": 1,
+      "max_required_lambda": 0.011697480339732181
+    }
+  },
+  "comparison_to_phase_2_beginner_threshold": {
+    "beginner_lambda_star": 0.109661226,
+    "intermediate_lambda_star": 0.14936848561939664,
+    "note": "Phase 2 derived lambda* for the Beginner instance only. Phase 3 ran Method C at lambda=1.0, which is above this Intermediate threshold."
+  },
+  "commands": {
+    "this_script": "run_phase3_followup.py",
+    "enumeration": "in-process, exhaustive over 2**12 = 4096 states"
+  },
+  "notes": [
+    "Enumeration only: no optimiser is rerun.",
+    "Path 1 and path 2 share no cost-evaluation helper; both are cross-checked against phase1_core.exact_benchmark.",
+    "The tie at lambda* is additionally confirmed with phase1_core.cost_penalized_loop, a third independent evaluator."
+  ]
+}
